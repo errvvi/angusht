@@ -10,6 +10,8 @@ interface BuildEnv {
 }
 
 export default (env: BuildEnv) => {
+  console.log(env);
+
   const mode = env.mode || "development";
   const port = env.port || 3000;
   const isDev = mode === "development";
@@ -22,6 +24,7 @@ export default (env: BuildEnv) => {
       path: path.resolve(__dirname, "build"),
       clean: true,
     },
+
     plugins: [
       new HTMLWebpackPlugin({
         template: path.resolve(__dirname, "public", "index.html"),
