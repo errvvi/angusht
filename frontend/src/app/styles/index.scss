@@ -1,0 +1,32 @@
+@import url(variables.scss);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  //   font-family: ;
+}
+body {
+  transition: all 0.2s;
+}
+button,
+input {
+  border: none;
+  outline: none;
+}
+
+// input::placeholder {
+//   font-family: ;
+// }
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.app {
+  background: yellowgreen;
+}

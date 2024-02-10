@@ -1,9 +1,4 @@
-import  ReactDOM  from "react-dom/client";
-import Counter from "./components/Counter";
-import './index.scss'
-ReactDOM.createRoot(document.getElementById("root")).render(
-<div className="app">
-<Counter/>
-</div>
-
-)
+import ReactDOM from "react-dom/client";
+import "./app/styles/index.scss";
+import App from "./app/App";
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
