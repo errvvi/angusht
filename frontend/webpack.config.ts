@@ -72,6 +72,10 @@ export default (env: BuildEnv) => {
             },
           ],
         },
+        {
+          test: /\.svg$/,
+          use: ["@svgr/webpack"],
+        },
       ],
     },
     resolve: {
