@@ -76,7 +76,11 @@ export default (env: BuildEnv) => {
     },
     resolve: {
       extensions: [".tsx", ".ts", ".js"],
+      alias: {
+        "@": path.resolve(__dirname, "src/"),
+      },
     },
+
     devtool: isDev ? "inline-source-map" : undefined,
 
     devServer: isDev
