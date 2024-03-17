@@ -21,9 +21,15 @@ export const Navbar = () => {
           </div>
 
           <div className="flex gap-1 mb-12">
-            <Icon type="Telegram" />
-            <Icon type="Youtube" />
-            <Icon type="Vk" />
+            <a href="/" target="_blank">
+              <Icon type="Telegram" />
+            </a>
+            <a href="/" target="_blank">
+              <Icon type="Youtube" />
+            </a>
+            <a href="/" target="_blank">
+              <Icon type="Vk" />
+            </a>
           </div>
         </div>
         <NavBottom />
