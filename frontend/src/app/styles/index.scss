@@ -1,0 +1,34 @@
+@import url(variables.scss);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jost", sans-serif;
+}
+
+body {
+  transition: all 0.2s;
+}
+button,
+input {
+  border: none;
+  outline: none;
+}
+
+input::placeholder {
+  font-family: "Jost", sans-serif;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
