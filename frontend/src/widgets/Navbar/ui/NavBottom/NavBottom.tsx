@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export const NavBottom = () => {
   return (
     <nav className={cls.nav}>
-      <ul className="flex justify-around items-center h-20 text-white uppercase">
+      <ul className="flex justify-around items-center h-20 text-white uppercase font-bold">
         <li>
           <div className="p-4 ">
             <Link to="/">Главная</Link>
