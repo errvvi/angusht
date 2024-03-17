@@ -3,8 +3,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  //   font-family: ;
+  font-family: "Jost", sans-serif;
 }
+
 body {
   transition: all 0.2s;
 }
@@ -14,9 +15,9 @@ input {
   outline: none;
 }
 
-// input::placeholder {
-//   font-family: ;
-// }
+input::placeholder {
+  font-family: "Jost", sans-serif;
+}
 
 ul,
 ol {
@@ -26,7 +27,8 @@ ol {
 a {
   text-decoration: none;
 }
-
-.app {
-  background: yellowgreen;
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
 }
