@@ -61,6 +61,7 @@ export default (env: BuildEnv) => {
               },
             },
             "sass-loader",
+            "postcss-loader",
           ],
         },
       ],
