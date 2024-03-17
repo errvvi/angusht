@@ -1,4 +1,5 @@
 import { Navbar } from "../widgets";
+import AppRouter from "./Provider/AppRouter/ui/AppRouter";
 
 const App = () => {
   return (
@@ -6,6 +7,7 @@ const App = () => {
       <div className="app app_normal">
         <div className="container">
           <Navbar />
+          <AppRouter />
         </div>
       </div>
     </div>
