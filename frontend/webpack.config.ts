@@ -90,6 +90,7 @@ export default (env: BuildEnv) => {
     devServer: isDev
       ? {
           port: port,
+          historyApiFallback: true,
           open: true,
           hot: true,
         }
