@@ -1,5 +1,5 @@
 import { Navbar } from "../widgets";
-import AppRouter from "./provider/AppRouter/ui/AppRouter";
+import AppRouter from "./Provider/AppRouter/ui/AppRouter";
 
 const App = () => {
   return (

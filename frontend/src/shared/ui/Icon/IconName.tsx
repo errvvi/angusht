@@ -1,5 +1,4 @@
 import Telegram from "../../assets/svg/icon-telegram.svg";
-import Vk from "../../assets/svg/icon-vk.svg";
 import Vector from "../../assets/svg/Vector.svg";
 
 import TwoLiga from "../../assets/2nd-league-logo-2022.png";
@@ -12,8 +11,6 @@ import LeonBets from "../../assets/leonbets.png";
 
 export type IconType =
   | "Telegram"
-  | "Vk"
-  | "Youtube"
   | "Vector"
   | "TwoLiga"
   | "SportMaster"
@@ -22,7 +19,6 @@ export type IconType =
   | "Sports"
   | "Leon"
   | "LeonBets";
-
 
 export const IconName: Record<IconType, JSX.Element> = {
   Telegram: <Telegram />,
