@@ -24,7 +24,7 @@ export type IconType =
   | "Leon"
   | "LeonBets";
 
-export const IconName: Partial<Record<IconType, JSX.Element>> = {
+export const IconName: Record<IconType, JSX.Element> = {
   Telegram: <Telegram />,
   Vk: <Vk />,
   Youtube: <Youtube />,
