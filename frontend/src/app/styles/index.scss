@@ -12,6 +12,7 @@
 
 body {
   transition: all 0.2s;
+  height: 100vh;
 }
 button,
 input {
@@ -35,4 +36,7 @@ a {
   max-width: 1400px;
   width: 100%;
   margin: 0 auto;
+}
+.wrap {
+  padding: auto;
 }

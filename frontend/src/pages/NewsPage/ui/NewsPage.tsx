@@ -1,11 +1,10 @@
 import { ArticleCard } from "@/widgets/ArticleCard/ui/ArticleCard";
-import React from "react";
+import React, { useEffect } from "react";
 
 function NewsPage() {
   return (
-      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 ml-10">
-        <ArticleCard />
-        <ArticleCard />
+    <div className="bg-customGreen">
+      <div className=" grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3  ml-12">
         <ArticleCard />
         <ArticleCard />
         <ArticleCard />
@@ -14,6 +13,7 @@ function NewsPage() {
         <ArticleCard />
         <ArticleCard />
       </div>
+    </div>
   );
 }
 

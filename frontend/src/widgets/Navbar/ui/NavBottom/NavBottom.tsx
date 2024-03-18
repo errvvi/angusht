@@ -22,7 +22,7 @@ export const NavBottom = () => {
           <li>
             <div
               className={ClassNames(
-                "p-4 ",
+                "p-4 select-none",
                 { [cls.active]: currentPath === link[0] },
                 []
               )}

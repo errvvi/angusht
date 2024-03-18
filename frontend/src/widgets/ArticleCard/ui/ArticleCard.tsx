@@ -1,19 +1,37 @@
-import React from "react";
+import React, { FC } from "react";
 import image from "@/shared/assets/articleImage.png";
+import { Text } from "@/shared/ui/Text/Text";
+import { ClassNames } from "@/shared/lib/classNames";
+import { Link } from "react-router-dom";
 
-export const ArticleCard = () => {
+interface ArticleCardProps {
+  id?: string;
+  img?: string;
+  title?: string;
+  content?: string;
+}
+
+export const ArticleCard: FC<ArticleCardProps> = ({
+  id,
+  img,
+  title = "Angusht is the best team in the World!",
+  content,
+}) => {
   return (
-    <div className="max-w-sm bg-white my-5 rounded-lg shadow dark:bg-gray-100 dark:border-gray-700">
-      <a href="#">
+    <Link to={`/article/${id}`}>
+      <div className="max-w-sm bg-white my-5 rounded-lg shadow dark:bg-gray-100 dark:border-gray-700">
         <img className="rounded-t-lg" src={image} alt="" />
-      </a>
-      <div className="p-2">
-        <a href="#">
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-green-900 dark:text-gray">
-            Angusht is the best team in the World!
-          </h5>
-        </a>
+        <div className="p-2 flex flex-col">
+          <span className="text-customGreen mb-2 text-2xl font-bold tracking-tight">
+            {/* Angusht is the best team in the World! */}
+            {title}
+          </span>
+
+          <div className="">
+            <p className="text-black">{content}</p>
+          </div>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 };

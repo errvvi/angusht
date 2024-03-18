@@ -5,18 +5,16 @@ import cls from "./Navbar.module.scss";
 import { Text } from "@/shared/ui/Text/Text";
 export const Navbar = () => {
   return (
-    <div className="container">
+    <div className="container mx-3">
       <div className={cls.navbar}>
         <div className={cls.wrap}>
           <div className="flex gap-5">
             <Logo />
             <div className="flex flex-col gap-3">
-              <Text tag="h1" color="green" className="font-black text-2xl">
+              <h1 className="text-customGreen font-black text-2xl">
                 ФУТБОЛЬНЫЙ КЛУБ “АНГУШТ”
-              </Text>
-              <Text tag="h2" color="green" className="font-black">
-                ОФИЦИАЛЬНЫЙ САЙТ
-              </Text>
+              </h1>
+              <h2 className="text-customGreen font-black">ОФИЦИАЛЬНЫЙ САЙТ</h2>
             </div>
           </div>
 
@@ -24,9 +22,9 @@ export const Navbar = () => {
             <a href="/" target="_blank">
               <Icon type="Telegram" />
             </a>
-            <a href="/" target="_blank">
+            {/* <a href="/" target="_blank">
               <Icon type="Youtube" />
-            </a>
+            </a> */}
             <a href="/" target="_blank">
               <Icon type="Vk" />
             </a>

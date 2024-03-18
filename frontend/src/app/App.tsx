@@ -1,6 +1,7 @@
 import { Text } from "@/shared/ui/Text/Text";
 import { Navbar } from "../widgets";
 import AppRouter from "./Provider/AppRouter/ui/AppRouter";
+import { NavBottom } from "@/widgets/Navbar/ui/NavBottom/NavBottom";
 
 const App = () => {
   return (
