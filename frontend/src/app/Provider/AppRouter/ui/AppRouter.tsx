@@ -10,11 +10,11 @@ const AppRouter = () => {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/" element={<ClubPage />} />
-      <Route path="/" element={<MediaPage />} />
-      <Route path="/" element={<NewsPage />} />
-      <Route path="/" element={<SeasonPage />} />
-      <Route path="/" element={<TeamPage />} />
+      <Route path="/club" element={<ClubPage />} />
+      <Route path="/media" element={<MediaPage />} />
+      <Route path="/news" element={<NewsPage />} />
+      <Route path="/season" element={<SeasonPage />} />
+      <Route path="/team" element={<TeamPage />} />
     </Routes>
   );
 };
