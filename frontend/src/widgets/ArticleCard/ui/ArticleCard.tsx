@@ -1,7 +1,5 @@
 import React, { FC } from "react";
 import image from "@/shared/assets/articleImage.png";
-import { Text } from "@/shared/ui/Text/Text";
-import { ClassNames } from "@/shared/lib/classNames";
 import { Link } from "react-router-dom";
 
 interface ArticleCardProps {

@@ -2,7 +2,6 @@ import { Icon } from "@/shared/ui/Icon/Icon";
 import { Logo } from "../../../../shared/ui/Logo/Logo";
 import { NavBottom } from "../NavBottom/NavBottom";
 import cls from "./Navbar.module.scss";
-import { Text } from "@/shared/ui/Text/Text";
 export const Navbar = () => {
   return (
     <div className="container mx-3">
