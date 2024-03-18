@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        tableHead: "#1B4332E5",
         customGreen: "#1B4332",
       },
     },
