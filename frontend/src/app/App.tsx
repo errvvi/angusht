@@ -1,17 +1,18 @@
 import { Navbar } from "../widgets";
-import AppRouter from "./Provider/AppRouter/ui/AppRouter";
-import { NavBottom } from "@/widgets/Navbar/ui/NavBottom/NavBottom";
+import AppRouter from "./provider/AppRouter/ui/AppRouter";
 
 const App = () => {
   return (
-    <div className="container">
-      <div className="app app_normal">
-        <div className="container">
-          <Navbar />
-          <AppRouter />
+    <>
+      <Navbar />
+      <div className="container">
+        <div className="app app_normal">
+          <div className="container">
+            <AppRouter />
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

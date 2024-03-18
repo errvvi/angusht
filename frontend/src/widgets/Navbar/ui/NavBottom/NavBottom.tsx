@@ -20,15 +20,16 @@ export const NavBottom = () => {
       <ul className="flex justify-around items-center h-20 text-white uppercase font-bold">
         {links.map((link) => (
           <li>
-            <div
+            <Link
               className={ClassNames(
-                "p-4 select-none",
+                "pt-4 pb-4 pl-9 pr-9 text-xl select-none",
                 { [cls.active]: currentPath === link[0] },
                 []
               )}
+              to={link[0]}
             >
-              <Link to={link[0]}>{link[1]}</Link>
-            </div>
+              {link[1]}
+            </Link>
           </li>
         ))}
       </ul>
