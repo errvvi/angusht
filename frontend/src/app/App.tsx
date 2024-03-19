@@ -1,3 +1,4 @@
+import { Icon } from "@/shared/ui";
 import { Navbar } from "../widgets";
 import AppRouter from "./Provider/AppRouter/ui/AppRouter";
 
@@ -12,6 +13,7 @@ const App = () => {
           </div>
         </div>
       </div>
+      <Icon className="w-screen " type="LeonBets" />
     </>
   );
 };

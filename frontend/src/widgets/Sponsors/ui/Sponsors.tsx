@@ -13,6 +13,7 @@ export const Sponsors = () => {
             {" "}
             <Icon className="w-16" type="TwoLiga" />
           </a>
+
           <a href="#">
             {" "}
             <Icon className="w-56 h-7" type="SportMaster" />
@@ -32,7 +33,7 @@ export const Sponsors = () => {
             <Icon className="w-40" type="Leon" />
           </a>
         </div>
-        <Icon type="LeonBets" />
+        {/* <Icon className="" type="LeonBets" /> */}
       </div>
     </div>
   );
