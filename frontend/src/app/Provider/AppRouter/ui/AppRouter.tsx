@@ -1,4 +1,5 @@
 import ClubPage from "@/pages/ClubPage/ui/ClubPage";
+import { DetailArticlePage } from "@/pages/DetailArticlePage/ui/DetailArticlePage";
 import HomePage from "@/pages/HomePage/ui/HomePage";
 import MediaPage from "@/pages/MediaPage/ui/MediaPage";
 import NewsPage from "@/pages/NewsPage/ui/NewsPage";
@@ -13,6 +14,7 @@ const AppRouter = () => {
       <Route path="/club" element={<ClubPage />} />
       <Route path="/media" element={<MediaPage />} />
       <Route path="/news" element={<NewsPage />} />
+      <Route path="/article/:id" element={<DetailArticlePage />} />
       <Route path="/season" element={<SeasonPage />} />
       <Route path="/team" element={<TeamPage />} />
     </Routes>
