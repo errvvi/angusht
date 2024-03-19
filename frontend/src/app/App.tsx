@@ -1,6 +1,7 @@
 import { Icon } from "@/shared/ui";
 import { Navbar, Sponsors } from "../widgets";
 import AppRouter from "./Provider/AppRouter/ui/AppRouter";
+import { Footer } from "@/widgets/Footer/ui/Footer";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         </div>
       </div>
       <Sponsors />
+      <Footer />
     </>
   );
 };
