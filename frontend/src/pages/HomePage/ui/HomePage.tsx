@@ -8,14 +8,14 @@ function HomePage() {
   const [articles, setArticles] = useState([]);
   const [parent, enableAnimations] = useAutoAnimate(/* optional config */);
   useEffect(() => {
-    const getPosts = async () => {
+    const getArticles = async () => {
       const { data } = await axios.get(
         "https://65f85cccdf151452460f3434.mockapi.io/api/articles"
       );
       setArticles(data);
     };
 
-    getPosts();
+    getArticles();
   }, []); // ИМИТАЦИЯ
 
   return (

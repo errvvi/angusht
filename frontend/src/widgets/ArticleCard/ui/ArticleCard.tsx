@@ -12,7 +12,7 @@ interface ArticleCardProps {
 export const ArticleCard: FC<ArticleCardProps> = ({
   id,
   img,
-  title = "Angusht is the best team in the World!",
+  title,
   content,
 }) => {
   return (
