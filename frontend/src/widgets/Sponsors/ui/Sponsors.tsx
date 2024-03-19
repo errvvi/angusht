@@ -1,5 +1,4 @@
 import { Icon } from "@/shared/ui/Icon/Icon";
-import React from "react";
 
 export const Sponsors = () => {
   return (
