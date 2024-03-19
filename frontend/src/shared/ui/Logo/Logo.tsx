@@ -1,5 +1,5 @@
 import cls from "./Logo.module.scss";
-import LogoPng from "../../assets/Logo.png";
+import LogoPng from "../../assets/other/Logo.png";
 export const Logo = () => {
   return (
     <div className={cls.logoDiv}>
