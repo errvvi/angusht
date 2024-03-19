@@ -3,10 +3,10 @@ import axios from "axios";
 import { ArticleCard } from "@/widgets/ArticleCard/ui/ArticleCard";
 import { Icon } from "@/shared/ui/Icon/Icon";
 import { Link } from "react-router-dom";
-
+import { useAutoAnimate } from "@formkit/auto-animate/react";
 function HomePage() {
   const [articles, setArticles] = useState([]);
-
+  const [parent, enableAnimations] = useAutoAnimate(/* optional config */);
   useEffect(() => {
     const getPosts = async () => {
       const { data } = await axios.get(
@@ -30,7 +30,10 @@ function HomePage() {
           </div>
         </Link>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 ml-12">
+        <div
+          ref={parent}
+          className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 ml-12"
+        >
           {articles
             .slice(-6)
             .reverse()
