@@ -1,4 +1,5 @@
 import Telegram from "../../assets/svg/icon-telegram.svg";
+import TelegramWhite from "../../assets/svg/iconWhite-telegram.svg";
 import Vector from "../../assets/svg/Vector.svg";
 
 import TwoLiga from "../../assets/2nd-league-logo-2022.png";
@@ -9,8 +10,11 @@ import Sports from "../../assets/sports_logo.png";
 import Leon from "../../assets/ЛЕОН.png";
 import LeonBets from "../../assets/leonbets.png";
 
+import FlagRussian from "../../assets/flagRussian.png";
+
 export type IconType =
   | "Telegram"
+  | "TelegramWhite"
   | "Vector"
   | "TwoLiga"
   | "SportMaster"
@@ -18,10 +22,12 @@ export type IconType =
   | "Sisrus"
   | "Sports"
   | "Leon"
-  | "LeonBets";
+  | "LeonBets"
+  | "FlagRussian";
 
 export const IconName: Record<IconType, JSX.Element> = {
   Telegram: <Telegram />,
+  TelegramWhite: <TelegramWhite />,
   Vector: <Vector />,
   TwoLiga: <img src={TwoLiga} />,
   SportMaster: <img src={SportMaster} />,
@@ -30,4 +36,5 @@ export const IconName: Record<IconType, JSX.Element> = {
   Sports: <img src={Sports} />,
   Leon: <img src={Leon} />,
   LeonBets: <img src={LeonBets} />,
+  FlagRussian: <img src={FlagRussian} />,
 };
