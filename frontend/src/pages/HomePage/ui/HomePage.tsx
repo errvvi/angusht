@@ -3,7 +3,6 @@ import axios from "axios";
 import { ArticleCard } from "@/widgets/ArticleCard/ui/ArticleCard";
 import { Icon } from "@/shared/ui/Icon/Icon";
 import { Link } from "react-router-dom";
-import { Sponsors } from "@/widgets/Sponsors/ui/Sponsors";
 
 function HomePage() {
   const [articles, setArticles] = useState([]);
@@ -20,7 +19,7 @@ function HomePage() {
   }, []); // ИМИТАЦИЯ
 
   return (
-    <div className="bg-customGreen flex flex-col gap-14">
+    <div className="bg-customGreen flex flex-col">
       <div className="Articles-part">
         <Link to={"/news"}>
           <div className="ml-12 flex items-center gap-3 cursor-pointer">
@@ -44,8 +43,6 @@ function HomePage() {
             ))}
         </div>
       </div>
-
-      <Sponsors />
     </div>
   );
 }
