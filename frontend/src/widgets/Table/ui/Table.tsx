@@ -13,8 +13,8 @@ export const Table = () => {
           <th className="px-6 py-3 text-center font-bold">О</th>
         </thead>
         <tbody>
-          <tr className="hover:bg-gray-100 text-xl">
-            <td className="text-3xl text-center py-3 px-6 font-semibold">1</td>
+          <tr className="hover:bg-neutral-300 text-xl bg-white">
+            <td className="text-2xl text-center py-3 px-6 font-semibold">1</td>
             <td className="text-center py-3 px-6 font-semibold">
               Легион (Махачкала)
             </td>
@@ -25,8 +25,8 @@ export const Table = () => {
             <td className="text-center py-3 px-6 font-semibold">0:0</td>
             <td className="text-center py-3 px-6 font-semibold">0</td>
           </tr>
-          <tr className="hover:bg-gray-100 text-xl">
-            <td className="text-3xl text-center py-3 px-6 font-semibold">1</td>
+          <tr className="hover:bg-neutral-300 text-xl bg-white">
+            <td className="text-2xl text-center py-3 px-6 font-semibold">1</td>
             <td className="text-center py-3 px-6 font-semibold">
               Легион (Махачкала)
             </td>
@@ -37,8 +37,8 @@ export const Table = () => {
             <td className="text-center py-3 px-6 font-semibold">0:0</td>
             <td className="text-center py-3 px-6 font-semibold">0</td>
           </tr>
-          <tr className="hover:bg-gray-100 text-xl">
-            <td className="text-3xl text-center py-3 px-6 font-semibold">1</td>
+          <tr className="hover:bg-neutral-300 text-xl bg-white">
+            <td className="text-2xl text-center py-3 px-6 font-semibold">1</td>
             <td className="text-center py-3 px-6 font-semibold">
               Легион (Махачкала)
             </td>
@@ -49,8 +49,8 @@ export const Table = () => {
             <td className="text-center py-3 px-6 font-semibold">0:0</td>
             <td className="text-center py-3 px-6 font-semibold">0</td>
           </tr>
-          <tr className="hover:bg-gray-100 text-xl">
-            <td className="text-3xl text-center py-3 px-6 font-semibold">1</td>
+          <tr className="hover:bg-neutral-300 text-xl bg-white">
+            <td className="text-2xl text-center py-3 px-6 font-semibold">1</td>
             <td className="text-center py-3 px-6 font-semibold">
               Легион (Махачкала)
             </td>
@@ -61,8 +61,8 @@ export const Table = () => {
             <td className="text-center py-3 px-6 font-semibold">0:0</td>
             <td className="text-center py-3 px-6 font-semibold">0</td>
           </tr>
-          <tr className="hover:bg-gray-100 text-xl">
-            <td className="text-3xl text-center py-3 px-6 font-semibold">1</td>
+          <tr className="hover:bg-neutral-300 text-xl bg-white">
+            <td className="text-2xl text-center py-3 px-6 font-semibold">1</td>
             <td className="text-center py-3 px-6 font-semibold">
               Легион (Махачкала)
             </td>
@@ -73,8 +73,8 @@ export const Table = () => {
             <td className="text-center py-3 px-6 font-semibold">0:0</td>
             <td className="text-center py-3 px-6 font-semibold">0</td>
           </tr>
-          <tr className="hover:bg-gray-100 text-xl">
-            <td className="text-3xl text-center py-3 px-6 font-semibold">1</td>
+          <tr className="hover:bg-neutral-300 text-xl bg-white">
+            <td className="text-2xl text-center py-3 px-6 font-semibold">1</td>
             <td className="text-center py-3 px-6 font-semibold">
               Легион (Махачкала)
             </td>
