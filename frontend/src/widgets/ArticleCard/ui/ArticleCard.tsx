@@ -24,7 +24,6 @@ export const ArticleCard: FC<ArticleCardProps> = ({
         <img className="rounded-t-lg" src={image} alt="" />
         <div className="p-2 flex flex-col">
           <span className="text-customGreen mb-2 text-2xl font-bold tracking-tight">
-            {/* Angusht is the best team in the World! */}
             {title}
           </span>
 
