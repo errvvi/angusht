@@ -4,6 +4,7 @@ import { ArticleCard } from "@/widgets/ArticleCard/ui/ArticleCard";
 import { Icon } from "@/shared/ui/Icon/Icon";
 import { Link } from "react-router-dom";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
+import { Table } from "@/widgets/Table/ui/Table";
 function HomePage() {
   const [articles, setArticles] = useState([]);
   const [parent, enableAnimations] = useAutoAnimate(/* optional config */);
@@ -46,6 +47,7 @@ function HomePage() {
             ))}
         </div>
       </div>
+      <Table />
     </div>
   );
 }
