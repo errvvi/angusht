@@ -4,7 +4,6 @@ import { ArticleCard } from "@/widgets/ArticleCard/ui/ArticleCard";
 import { Icon } from "@/shared/ui/Icon/Icon";
 import { Link } from "react-router-dom";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
-import { MatchTable } from "@/shared/ui/MatchTable/MatchTable";
 function HomePage() {
   const [articles, setArticles] = useState([]);
   const [parent, enableAnimations] = useAutoAnimate(/* optional config */);
@@ -21,7 +20,6 @@ function HomePage() {
 
   return (
     <div className="bg-customGreen flex flex-col">
-      <MatchTable />
       <div className="Articles-part">
         <Link to={"/news"}>
           <div className="ml-12 flex items-center gap-3 cursor-pointer">
