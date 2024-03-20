@@ -47,7 +47,17 @@ function HomePage() {
             ))}
         </div>
       </div>
-      <Table />
+      <div className="tournament-table">
+        <Link to={"/season"}>
+          <div className="ml-12 flex items-center gap-3 cursor-pointer">
+            <Icon type="Vector" />
+            <span className="font-black text-white text-2xl">
+              ТУРНИРНАЯ ТАБЛИЦА
+            </span>
+          </div>
+        </Link>
+        <Table />
+      </div>
     </div>
   );
 }
