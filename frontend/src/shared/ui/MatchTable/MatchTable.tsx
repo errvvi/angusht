@@ -1,5 +1,7 @@
 import React, { FC } from "react";
 import { Icon } from "../Icon/Icon";
+import { Team } from "../Team/Team";
+import { TeamType } from "../Team/TeamName";
 interface MatchTimetableProps {
   tour?: number;
   data?: string;
@@ -53,7 +55,7 @@ export const MatchTable: FC<MatchTimetableProps> = ({
 
       <div className="flex justify-around items-center ">
         <div className="flex flex-col">
-          <Icon className="w-20" type={`${teamOne}`} />
+          <Team className="w-20" type={`${teamOne as TeamType}`} />
           <span
             className="font-medium text-base flex flex-col text-center"
             dangerouslySetInnerHTML={{ __html: TeamOneText }}
@@ -65,7 +67,7 @@ export const MatchTable: FC<MatchTimetableProps> = ({
         </div>
 
         <div>
-          <Icon className="w-20" type={`${teamTwo}`} />
+          <Team className="w-20" type={`${teamTwo as TeamType}`} />
           <span
             className="font-medium text-base flex flex-col text-center"
             dangerouslySetInnerHTML={{ __html: TeamTwoText }}
