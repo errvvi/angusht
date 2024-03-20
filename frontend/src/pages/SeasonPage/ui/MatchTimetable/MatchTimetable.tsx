@@ -2,9 +2,12 @@ import { Icon } from "@/shared/ui";
 import { MatchTable } from "@/shared/ui/MatchTable/MatchTable";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useAutoAnimate } from "@formkit/auto-animate/react";
 
 export const MatchTimetable = () => {
   const [matchs, setMatchs] = useState([]);
+  const [parent, enableAnimations] = useAutoAnimate(/* optional config */);
+
   useEffect(() => {
     const getMatchs = async () => {
       const { data } = await axios.get(
@@ -26,7 +29,7 @@ export const MatchTimetable = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-10 ">
+      <div ref={parent} className="grid grid-cols-1 lg:grid-cols-2 gap-x-10 ">
         {matchs.map((match) => (
           <MatchTable
             key={match.id}

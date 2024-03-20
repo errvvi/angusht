@@ -1,14 +1,13 @@
 import ClubPage from "@/pages/ClubPage/ui/ClubPage";
 import { DetailArticlePage } from "@/pages/DetailArticlePage/ui/DetailArticlePage";
 import HomePage from "@/pages/HomePage/ui/HomePage/HomePage";
-import { MatchTimetable } from "@/pages/HomePage/ui/MatchTimetable/MatchTimetable";
+import { MatchTimetable } from "@/pages/SeasonPage/ui/MatchTimetable/MatchTimetable";
 import MediaPage from "@/pages/MediaPage/ui/MediaPage";
 import NewsPage from "@/pages/NewsPage/ui/NewsPage";
 import SeasonPage from "@/pages/SeasonPage/ui/SeasonPage";
 import TeamPage from "@/pages/TeamPage/ui/TeamPage";
-import { MatchTable } from "@/shared/ui/MatchTable/MatchTable";
-import { ArticleCard } from "@/widgets";
 import { Route, Routes } from "react-router-dom";
+import { Table } from "@/widgets/Table/ui/Table";
 
 const AppRouter = () => {
   return (
@@ -19,7 +18,7 @@ const AppRouter = () => {
       <Route path="/news" element={<NewsPage />} />
       <Route path="/article/:id" element={<DetailArticlePage />} />
       <Route path="/season" element={<SeasonPage />}>
-        <Route index element={<ArticleCard />} /> // таблица
+        <Route index element={<Table />} /> // таблица
         <Route path="matchtimetable" element={<MatchTimetable />} /> //
         расписание матчей
       </Route>
