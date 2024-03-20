@@ -27,7 +27,7 @@ import Rubin_Yalta from "../../assets/teams/Rubin_Yalta.png";
 import Sevastopol from "../../assets/teams/Sevastopol.png";
 import Spartak_Nalchik from "../../assets/teams/Spartak_Nalchik.png";
 
-import FlagRussian from "../../assets/flagRussian.png";
+import FlagRussian from "../../assets/other/flagRussian.png";
 
 // export type IconType =
 //   | "Telegram"
