@@ -42,6 +42,7 @@ function HomePage() {
                 key={article.id}
                 id={article.id}
                 title={article.title}
+                img={article.img}
               />
             ))}
         </div>

@@ -18,12 +18,16 @@ export const NavBottom = () => {
   return (
     <nav className={cls.nav}>
       <ul className="flex justify-around items-center h-20 text-white uppercase font-bold">
-        {links.map((link) => (
-          <li>
+        {links.map((link, index) => (
+          <li key={index}>
             <Link
               className={ClassNames(
                 "pt-4 pb-4 pl-9 pr-9 text-xl select-none",
-                { [cls.active]: currentPath === link[0] },
+                {
+                  [cls.active]:
+                    currentPath === link[0] ||
+                    currentPath.includes(link[0] + "/"),
+                },
                 []
               )}
               to={link[0]}

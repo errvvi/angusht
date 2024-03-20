@@ -16,29 +16,27 @@ export const MatchTable: FC<MatchTimetableProps> = ({
   teamOne = "FC_Forte",
   teamTwo = "FC_Angusht",
 }) => {
+  const spanText = "<span class='text-small leading-3'>";
+
   const teamNames = {
-    Alaniya2: "АЛАНИЯ <br/> <span class='text-xs'>((Владикавказ))</span>",
-    Astrakhan: "АСТРАХАНЬ <br/> <span class='text-xs'>(Астрахань)</span>",
-    BiologNovokubansk:
-      "БИОЛОГ НОВОКУБАНСК <br/> <span class='text-xs'>(п.Прогресс)</span>",
-    Dinamo_Mahachkala:
-      "ДИНАМО-2 <br/> <span class='text-xs'>(Махачкала)</span>",
-    DinamoStavropol:
-      "ДИНАМО СТАВРОПОЛЬ <br/> <span class='text-xs'>(Ставрополь)</span>",
-    Druzhba: "ДРУЖБА <br/> <span class='text-xs'>(Майкоп)</span>",
-    FC_Angusht: "Ангушт <br/> <span class='text-xs'>(Назрань)</span>",
-    FC_Forte: "ФОРТЕ <br/> <span class='text-xs'>(Таганрог)</span>",
-    fc_Rostov2: "РОСТОВ-2 <br/> <span class='text-xs'>(Ростов-на-Дону)</span>",
-    fkNartLogo: "Ангушт <br/> <span class='text-xs'>(Назрань)</span>",
-    Kuban_Xolding:
-      "КУБАНЬ ХОЛДИНГ <br/> <span class='text-xs'>(ст.Павловская)</span>",
-    Legion: "ЛЕГИОН ДИНАМО <br/> <span class='text-xs'>(Махачкала)</span>",
-    Pobeda: "ПОБЕДА <br/> <span class='text-xs'>(Хасавюрт)</span>",
-    Rubin_Yalta: "РУБИН ЯЛТА <br/> <span class='text-xs'>(Ялта)</span>",
-    Sevastopol:
-      "СЕВАСТОПОЛЬ <br/> <span class='text-xs'>((Севастополь))</span>",
-    Spartak_Nalchik:
-      "СПАРТАК-НАЛЬЧИК <br/> <span class='text-xs'>((Нальчик))</span>",
+    "Alania-2": `АЛАНИЯ <br/> ${spanText}(Владикавказ)</span>`,
+    Astrakhan: `АСТРАХАНЬ <br/> ${spanText}(Астрахань)</span>`,
+    "Biolog-Novokubansk": `БИОЛОГ НОВОКУБАНСК <br/> ${spanText}(п.Прогресс)</span>`,
+    "Dinamo_Mahachkala-2": `ДИНАМО-2 <br/> ${spanText}(Махачкала)</span>`,
+    Dinamo_Stavropol: `ДИНАМО СТАВРОПОЛЬ <br/> ${spanText}(Ставрополь)</span>`,
+    Druzhba: `ДРУЖБА <br/> ${spanText}(Майкоп)</span>`,
+    Angusht: `Ангушт <br/> ${spanText}(Назрань)</span>`,
+    FC_Forte: `ФОРТЕ <br/> ${spanText}(Таганрог)</span>`,
+    "FC_Rostov-2": `РОСТОВ-2 <br/> ${spanText}(Ростов-на-Дону)</span>`,
+    fkNartLogo: `Ангушт <br/> ${spanText}(Назрань)</span>`,
+    Kuban_Holding: `КУБАНЬ ХОЛДИНГ <br/> ${spanText}(ст.Павловская)</span>`,
+    Legion: `ЛЕГИОН ДИНАМО <br/> ${spanText}(Махачкала)</span>`,
+    Pobeda: `ПОБЕДА <br/> ${spanText}(Хасавюрт)</span>`,
+    Rubin_Yalta: `РУБИН ЯЛТА <br/> ${spanText}(Ялта)</span>`,
+    Sevastopol: `СЕВАСТОПОЛЬ <br/> ${spanText}(Севастополь)</span>`,
+    Spartak_Nalchik: `СПАРТАК-НАЛЬЧИК <br/> ${spanText}(Нальчик)</span>`,
+    Stroitel: `СТРОИТЕЛЬ <br/> ${spanText}(Каменск-Шахтинский)</span>`,
+    FC_Nart: `НАРТ <br/> ${spanText}(Черкесск)</span>`,
   };
   //@ts-ignore
   const TeamOneText = teamNames[teamOne];
@@ -53,11 +51,11 @@ export const MatchTable: FC<MatchTimetableProps> = ({
         </div>
       </div>
 
-      <div className="flex justify-around items-center ">
-        <div className="flex flex-col">
+      <div className="flex justify-around items-center max-h-32">
+        <div className="flex flex-col justify-center items-center max-w-28">
           <Team className="w-20" type={`${teamOne as TeamType}`} />
           <span
-            className="font-medium text-base flex flex-col text-center"
+            className="font-medium text-xs flex flex-col text-center"
             dangerouslySetInnerHTML={{ __html: TeamOneText }}
           ></span>
         </div>
@@ -66,12 +64,14 @@ export const MatchTable: FC<MatchTimetableProps> = ({
           <span className="font-bold text-xl tracking-0.5">{score}</span>
         </div>
 
-        <div>
+        <div className="flex flex-col justify-center items-center max-w-28">
           <Team className="w-20" type={`${teamTwo as TeamType}`} />
-          <span
-            className="font-medium text-base flex flex-col text-center"
-            dangerouslySetInnerHTML={{ __html: TeamTwoText }}
-          ></span>
+          <div className="max-w-24">
+            <span
+              className="font-medium flex flex-col  text-center text-xs"
+              dangerouslySetInnerHTML={{ __html: TeamTwoText }}
+            ></span>
+          </div>
         </div>
       </div>
     </div>

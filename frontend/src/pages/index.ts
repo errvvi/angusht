@@ -1,4 +1,4 @@
-export { default as HomePage } from "./HomePage/ui/HomePage";
+export { default as HomePage } from "./HomePage/ui/HomePage/HomePage";
 export { default as ClubPage } from "./ClubPage/ui/ClubPage";
 export { default as NewsPage } from "./NewsPage/ui/NewsPage";
 export { default as MediaPage } from "./MediaPage/ui/MediaPage";
