@@ -1,5 +1,4 @@
 import { Icon } from "@/shared/ui/Icon/Icon";
-import React from "react";
 
 export const Sponsors = () => {
   return (
@@ -20,7 +19,7 @@ export const Sponsors = () => {
           <div className="max-w-56">
             <a href="#">
               <Icon
-                className="min-w-20 mx-auto max-w-full h-auto"
+                className="min-w-20 ml-20 mx-auto max-w-full h-auto"
                 type="SportMaster"
               />
             </a>
