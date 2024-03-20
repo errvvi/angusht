@@ -21,7 +21,7 @@ export const ArticleCard: FC<ArticleCardProps> = ({
       to={`/article/${id}`}
     >
       <div className="max-w-sm bg-white my-5 rounded-lg shadow dark:bg-gray-100 dark:border-gray-700">
-        <img className="rounded-t-lg" src={image} alt="" />
+        <img className="rounded-t-lg" src={img} alt="" />
         <div className="p-2 flex flex-col">
           <span className="text-customGreen mb-2 text-2xl font-bold tracking-tight">
             {title}
