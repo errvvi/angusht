@@ -35,7 +35,7 @@ export type TeamType =
   | "Spartak_Nalchik"
   | "Kuban_Holding";
 
-export const TeamName: Record<TeamType, JSX.Element> = {
+export const TeamName: Record<TeamType, JSX.Element | string> = {
   Angusht: <img src={Angusht} alt="Angusht" />,
   Astrakhan: <img src={Astrakhan} alt="Astrakhan" />,
   "Alania-2": <img src={Alania} alt="Alania" />,

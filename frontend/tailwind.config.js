@@ -11,6 +11,9 @@ module.exports = {
       letterSpacing: {
         0.5: "0.5rem",
       },
+      fontSize: {
+        small: "8px",
+      },
     },
   },
   plugins: [],
