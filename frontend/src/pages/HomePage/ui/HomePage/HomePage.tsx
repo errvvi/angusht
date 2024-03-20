@@ -5,15 +5,28 @@ import { Icon } from "@/shared/ui/Icon/Icon";
 import { Link } from "react-router-dom";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 import { Table } from "@/widgets/Table/ui/Table";
+import { MatchTable } from "@/shared/ui/MatchTable/MatchTable";
 function HomePage() {
   const [articles, setArticles] = useState([]);
+  const [matchs, setMatchs] = useState([]);
   const [parent, enableAnimations] = useAutoAnimate(/* optional config */);
   useEffect(() => {
     const getArticles = async () => {
-      const { data } = await axios.get(
-        "https://65f85cccdf151452460f3434.mockapi.io/api/articles"
-      );
-      setArticles(data);
+      try {
+        const response = await axios.get(
+          "https://65f85cccdf151452460f3434.mockapi.io/api/articles"
+        );
+        const articles = response.data;
+        setArticles(articles);
+
+        const responseMatches = await axios.get(
+          "https://65f85cccdf151452460f3434.mockapi.io/api/matchtimetable"
+        );
+        const matches = responseMatches.data;
+        setMatchs(matches);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
     };
 
     getArticles();
@@ -23,7 +36,7 @@ function HomePage() {
     <div className="bg-customGreen flex flex-col">
       <div className="Articles-part">
         <Link to={"/news"}>
-          <div className="ml-12 flex items-center gap-3 cursor-pointer">
+          <div className=" flex items-center gap-3 cursor-pointer">
             <Icon type="Vector" />
             <span className="font-black text-white text-2xl">
               НОВОСТИ КЛУБА
@@ -48,9 +61,32 @@ function HomePage() {
             ))}
         </div>
       </div>
+      <div ref={parent} className="flex flex-col">
+        <div className="w-full flex  ">
+          <div className="flex items-center gap-3 cursor-pointer">
+            <Icon type="Vector" />
+            <span className="font-black text-white text-2xl">
+              РАСПИСАНИЕ МАТЧЕЙ
+            </span>
+          </div>
+        </div>
+        <div className="my-10 ml-28 grid grid-cols-1 lg:grid-cols-2  ">
+          {matchs.slice(0, 4).map((match) => (
+            <MatchTable
+              key={match.id}
+              tour={match.tour}
+              data={match.data}
+              score={match.score}
+              teamOne={match.teamOne}
+              teamTwo={match.teamTwo}
+            />
+          ))}
+        </div>
+      </div>
+
       <div className="tournament-table">
         <Link to={"/season"}>
-          <div className="ml-12 flex items-center gap-3 cursor-pointer">
+          <div className="flex items-center gap-3 cursor-pointer">
             <Icon type="Vector" />
             <span className="font-black text-white text-2xl">
               ТУРНИРНАЯ ТАБЛИЦА
