@@ -43,18 +43,16 @@ export const MatchTable: FC<MatchTimetableProps> = ({
   //@ts-ignore
   const TeamTwoText = teamNames[teamTwo];
   return (
-    <div className="flex flex-col gap-2 bg-white max-w-96 rounded-md p-2 border-x-2 border-t-4 border-t-1 border-matchTimetable border-solid">
+    <div className="flex flex-col  bg-white max-w-md rounded-md px-6 py-2 border-x-2 border-t-4 border-t-1 border-matchTimetable border-solid">
       <div className="flex flex-col justify-center items-center ">
-        <div>
+        <div className="flex flex-col justify-center text-center">
           <span className="text-xl font-medium">{tour}-Й ТУР</span>
-        </div>
-        <div>
           <span className="text-xs font-medium">{data}</span>
         </div>
       </div>
 
       <div className="flex justify-around items-center ">
-        <div>
+        <div className="flex flex-col">
           <Icon className="w-20" type={`${teamOne}`} />
           <span
             className="font-medium text-base flex flex-col text-center"
@@ -62,8 +60,8 @@ export const MatchTable: FC<MatchTimetableProps> = ({
           ></span>
         </div>
 
-        <div>
-          <span className="font-bold tracking-0.5">{score}</span>
+        <div className="flex text-center mt-5">
+          <span className="font-bold text-xl tracking-0.5">{score}</span>
         </div>
 
         <div>
