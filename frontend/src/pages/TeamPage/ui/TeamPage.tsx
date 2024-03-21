@@ -5,60 +5,156 @@ import { useAutoAnimate } from "@formkit/auto-animate/react";
 import axios from "axios";
 import { useLocation } from "react-router-dom";
 import { ClassNames } from "@/shared/lib/classNames";
-import { Link } from "react-router-dom";
-
+interface PersonCard {
+  id: number;
+  name: string;
+  role: string;
+}
 function TeamPage() {
   const location = useLocation();
   const currentPath = location.pathname;
-  const links = [
-    ["/team", "РУКОВОДСТВО КЛУБА"],
-    ["/team/coachingStaff", "ТРЕНЕРСКИЙ ШТАБ"],
-    ["/team/footballers", "СОСТАВ КОМАНДЫ"],
+  const buttons = [
+    ["РУКОВОДСТВО КЛУБА", "Rukovodstvo"],
+    ["ТРЕНЕРСКИЙ ШТАБ", "Staff"],
+    ["СОСТАВ КОМАНДЫ", "player"],
   ];
 
   const [PersonCards, SetPersonCards] = useState([]);
   const [parent, enableAnimations] = useAutoAnimate(/*optional config */);
+  const [activeFilter, setActiveFilter] = useState("Rukovodstvo");
+
+  const fetchCards = async (filterParam: string) => {
+    const params = {
+      Role: filterParam,
+    };
+
+    const { data } = await axios.get(
+      "https://65f85cccdf151452460f3434.mockapi.io/api/articles",
+      { params }
+    );
+    SetPersonCards(data);
+  };
 
   useEffect(() => {
     const getCards = async () => {
-      const { data } = await axios.get(
-        "https://65fb4f6c14650eb21009ceba.mockapi.io/api/HumanCard"
-      );
-      SetPersonCards(data);
+      fetchCards("Rukovodstvo");
     };
+
     getCards();
   }, []);
 
+  const handleFilterClick = (filterParam: string) => {
+    if (filterParam !== activeFilter) {
+      setActiveFilter(filterParam);
+      fetchCards(filterParam);
+    }
+  };
+
   return (
-    <div>
-      <div ref={parent} className="flex flex-wrap gap-10 justify-center mt-10">
-        <nav className=" flex jus w-full">
-          <ul className="flex ml-24 font-personCard  h-20 text-white uppercase font-bold gap-32">
-            {links.map((link, index) => (
-              <li key={index}>
-                <Link
-                  className={ClassNames(
-                    "pt-4 pb-4 pl-9 pr-9 text-xl select-none",
-                    { [cls.active]: currentPath === link[0] },
-                    []
-                  )}
-                  to={link[0]}
-                >
-                  {link[1]}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-        {PersonCards.slice(0, 4).map((person) => (
-          <PersonCard
-            img={person.img}
-            jobTitle={person.jobTitle}
-            fio={person.FIO}
-            id={person.id}
-            Role={person.Role}
-          />
-        ))}
+    
+    <div className="">
+      <div
+        ref={parent}
+        className="flex flex-col flex-wrap gap-10 justify-center mt-10"
+      >
+        <div className="flex gap-10">
+          {buttons.map((item) => (
+            <button
+              className={ClassNames(
+                "",
+                { [cls.active]: activeFilter === `${item[1]}` },
+                []
+              )}
+              onClick={() => handleFilterClick(`${item[1]}`)}
+            >
+              {item[0]}
+            </button>
+          ))}
+        </div>
+        <div className="flex justify-between">
+          {PersonCards.map((person) => {
+            if (person.Role !== "player") {
+              return (
+                <PersonCard
+                  key={person.id}
+                  img={person.img}
+                  jobTitle={person.jobTitle}
+                  fio={person.FIO}
+                  id={person.id}
+                />
+              );
+            }
+          })}
+        </div>
+        {activeFilter === "player" && (
+          <div>
+            <div className="flex flex-col">
+              <span className="text-white">Вратари</span>
+              {PersonCards.map((player) => {
+                if (player.playerPosition === "goalkeeper") {
+                  return (
+                    <PersonCard
+                      key={player.id}
+                      img={player.img}
+                      jobTitle={player.jobTitle}
+                      fio={player.FIO}
+                      id={player.id}
+                    />
+                  );
+                }
+              })}
+            </div>
+            <div className="">
+              <span className="text-white">Защитники</span>
+              {PersonCards.map((player) => {
+                if (player.playerPosition === "def") {
+                  return (
+                    <PersonCard
+                      key={player.id}
+                      img={player.img}
+                      jobTitle={player.jobTitle}
+                      fio={player.FIO}
+                      id={player.id}
+                    />
+                  );
+                }
+              })}
+            </div>
+            <div className="">
+              <span className="text-white">Полузащитники</span>
+              {PersonCards.map((player) => {
+                if (player.playerPosition === "middef") {
+                  return (
+                    <PersonCard
+                      key={player.id}
+                      img={player.img}
+                      jobTitle={player.jobTitle}
+                      fio={player.FIO}
+                      id={player.id}
+                    />
+                  );
+                }
+              })}
+            </div>
+            <div className="">
+              <span className="text-white">Нападающие</span>
+              {PersonCards.map((player) => {
+                if (player.playerPosition === "forward") {
+                  return (
+                    <PersonCard
+                      key={player.id}
+                      img={player.img}
+                      jobTitle={player.jobTitle}
+                      fio={player.FIO}
+                      id={player.id}
+                    />
+                  );
+                }
+              })}
+            </div>
+          </div>
+        )}
+
       </div>
     </div>
   );
