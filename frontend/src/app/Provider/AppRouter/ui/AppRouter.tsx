@@ -6,7 +6,6 @@ import MediaPage from "@/pages/MediaPage/ui/MediaPage";
 import NewsPage from "@/pages/NewsPage/ui/NewsPage";
 import SeasonPage from "@/pages/SeasonPage/ui/SeasonPage";
 import TeamPage from "@/pages/TeamPage/ui/TeamPage";
-import { MatchTable } from "@/shared/ui/MatchTable/MatchTable";
 import { ArticleCard } from "@/widgets";
 import { Route, Routes } from "react-router-dom";
 
@@ -20,10 +19,13 @@ const AppRouter = () => {
       <Route path="/article/:id" element={<DetailArticlePage />} />
       <Route path="/season" element={<SeasonPage />}>
         <Route index element={<ArticleCard />} /> // таблица
-        <Route path="matchtimetable" element={<MatchTimetable />} /> //
-        расписание матчей
+        <Route path="matchtimetable" element={<MatchTimetable />} />
       </Route>
-      <Route path="/team" element={<TeamPage />} />
+      <Route path="/team" element={<TeamPage />}>
+        <Route path="Rukovodstvo" element={<TeamPage />} />
+        <Route path="CoachingStaff" element={<TeamPage />} />
+        <Route path="Footballers" element={<TeamPage />} />
+      </Route>
     </Routes>
   );
 };

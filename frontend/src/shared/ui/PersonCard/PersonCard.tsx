@@ -1,9 +1,8 @@
 import React, { FC } from "react";
 
-
 interface PersonProps {
   img: string;
-  jobTitle: string;
+  jobTitle?: string;
   fio: string;
   id: string;
 }
