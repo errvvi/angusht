@@ -14,7 +14,7 @@ function HomePage() {
     const getArticles = async () => {
       try {
         const response = await axios.get(
-          "https://65f85cccdf151452460f3434.mockapi.io/api/articles"
+          "https://65fb4f6c14650eb21009ceba.mockapi.io/api/articles"
         );
         const articles = response.data;
         setArticles(articles);
