@@ -29,7 +29,7 @@ function TeamPage() {
     };
 
     const { data } = await axios.get(
-      "https://65f85cccdf151452460f3434.mockapi.io/api/articles",
+      "https://65fb4f6c14650eb21009ceba.mockapi.io/api/HumanCard",
       { params }
     );
     SetPersonCards(data);
@@ -51,7 +51,6 @@ function TeamPage() {
   };
 
   return (
-    
     <div className="">
       <div
         ref={parent}
@@ -61,7 +60,7 @@ function TeamPage() {
           {buttons.map((item) => (
             <button
               className={ClassNames(
-                "",
+                "pt-2 pb-2 pl-5 pr-5 font-tableFont",
                 { [cls.active]: activeFilter === `${item[1]}` },
                 []
               )}
@@ -71,7 +70,7 @@ function TeamPage() {
             </button>
           ))}
         </div>
-        <div className="flex justify-between">
+        <div className="flex flex-row flex-wrap gap-20">
           {PersonCards.map((person) => {
             if (person.Role !== "player") {
               return (
@@ -87,74 +86,93 @@ function TeamPage() {
           })}
         </div>
         {activeFilter === "player" && (
-          <div>
-            <div className="flex flex-col">
-              <span className="text-white">Вратари</span>
-              {PersonCards.map((player) => {
-                if (player.playerPosition === "goalkeeper") {
-                  return (
-                    <PersonCard
-                      key={player.id}
-                      img={player.img}
-                      jobTitle={player.jobTitle}
-                      fio={player.FIO}
-                      id={player.id}
-                    />
-                  );
-                }
-              })}
+          <div className="flex flex-col gap-16">
+            <div className="flex flex-col ">
+              <div className="flex w-72 flex-col gap-0 mb-10 font-personCard text-center">
+                <span className="text-white text-2xl">ВРАТАРИ</span>
+                <div className={cls.TeamLine}></div>
+              </div>
+              <div className="flex flex-row gap-20">
+                {PersonCards.map((player) => {
+                  if (player.playerPosition === "goalkeeper") {
+                    return (
+                      <PersonCard
+                        key={player.id}
+                        img={player.img}
+                        jobTitle={player.jobTitle}
+                        fio={player.FIO}
+                        id={player.id}
+                      />
+                    );
+                  }
+                })}
+              </div>
+            </div>
+            <div className="flex flex-col flex-wrap gap-16">
+              <div className="flex w-72 flex-col gap-0 mb-10 font-personCard text-center">
+                <span className="text-white text-2xl">ЗАЩИТНИКИ</span>
+                <div className={cls.TeamLine}></div>
+              </div>
+              <div className="flex flex-row flex-wrap gap-20">
+                {PersonCards.map((player) => {
+                  if (player.playerPosition === "defender") {
+                    return (
+                      <PersonCard
+                        key={player.id}
+                        img={player.img}
+                        jobTitle={player.jobTitle}
+                        fio={player.FIO}
+                        id={player.id}
+                      />
+                    );
+                  }
+                })}
+              </div>
             </div>
             <div className="">
-              <span className="text-white">Защитники</span>
-              {PersonCards.map((player) => {
-                if (player.playerPosition === "def") {
-                  return (
-                    <PersonCard
-                      key={player.id}
-                      img={player.img}
-                      jobTitle={player.jobTitle}
-                      fio={player.FIO}
-                      id={player.id}
-                    />
-                  );
-                }
-              })}
+              <div className="flex w-72 flex-col gap-0 mb-10 font-personCard text-center">
+                <span className="text-white text-2xl">ПОЛУЗАЩИТНИКИ</span>
+                <div className={cls.TeamLine}></div>
+              </div>
+              <div className="flex flex-row flex-wrap gap-20">
+                {PersonCards.map((player) => {
+                  if (player.playerPosition === "midfielder") {
+                    return (
+                      <PersonCard
+                        key={player.id}
+                        img={player.img}
+                        jobTitle={player.jobTitle}
+                        fio={player.FIO}
+                        id={player.id}
+                      />
+                    );
+                  }
+                })}
+              </div>
             </div>
             <div className="">
-              <span className="text-white">Полузащитники</span>
-              {PersonCards.map((player) => {
-                if (player.playerPosition === "middef") {
-                  return (
-                    <PersonCard
-                      key={player.id}
-                      img={player.img}
-                      jobTitle={player.jobTitle}
-                      fio={player.FIO}
-                      id={player.id}
-                    />
-                  );
-                }
-              })}
-            </div>
-            <div className="">
-              <span className="text-white">Нападающие</span>
-              {PersonCards.map((player) => {
-                if (player.playerPosition === "forward") {
-                  return (
-                    <PersonCard
-                      key={player.id}
-                      img={player.img}
-                      jobTitle={player.jobTitle}
-                      fio={player.FIO}
-                      id={player.id}
-                    />
-                  );
-                }
-              })}
+              <div className="flex w-72 flex-col gap-0 mb-10 font-personCard text-center">
+                <span className="text-white text-2xl">НАПАДАЮЩИЕ</span>
+                <div className={cls.TeamLine}></div>
+              </div>
+              <div className="flex flex-row flex-wrap gap-20">
+                {PersonCards.map((player) => {
+                  if (player.playerPosition === "striker") {
+                    return (
+                      <PersonCard
+                        key={player.id}
+                        img={player.img}
+                        jobTitle={player.jobTitle}
+                        fio={player.FIO}
+                        id={player.id}
+                      />
+                    );
+                  }
+                })}
+              </div>
             </div>
           </div>
         )}
-
       </div>
     </div>
   );

@@ -25,8 +25,8 @@ const AppRouter = () => {
         <Route path="matchtimetable" element={<MatchTimetable />} />
       </Route>
       <Route path="/team" element={<TeamPage />}>
-        <Route path="CoachingStaff" element={<TeamPage />} />
-        <Route path="Footballers" element={<TeamPage />} />
+        {/* <Route path="CoachingStaff" element={<TeamPage />} />
+        <Route path="Footballers" element={<TeamPage />} /> */}
         =======
         <Route index element={<Table />} /> // таблица
         <Route path="matchtimetable" element={<MatchTimetable />} /> //
