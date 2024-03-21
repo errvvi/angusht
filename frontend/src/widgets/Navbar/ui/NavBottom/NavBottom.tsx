@@ -9,7 +9,7 @@ const links = [
   ["/season", "Сезон"],
   ["/team", "Команда"],
   ["/club", "Клуб"],
-  ["/media", "Медиа"],
+  // ["/media", "Медиа"],
 ];
 
 export const NavBottom = () => {

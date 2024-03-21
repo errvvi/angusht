@@ -11,7 +11,7 @@ function NewsPage() {
   useEffect(() => {
     const getArticles = async () => {
       const { data } = await axios.get(
-        "https://65f85cccdf151452460f3434.mockapi.io/api/articles"
+        "https://65fb4f6c14650eb21009ceba.mockapi.io/api/articles"
       );
       setArticles(data);
     };
@@ -25,7 +25,12 @@ function NewsPage() {
         className=" grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3  ml-12"
       >
         {articles.reverse().map((article) => (
-          <ArticleCard key={article.id} id={article.id} title={article.title} />
+          <ArticleCard
+            img={article.img}
+            key={article.id}
+            id={article.id}
+            title={article.title}
+          />
         ))}
       </div>
     </div>
