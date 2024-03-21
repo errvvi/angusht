@@ -37,6 +37,7 @@ export const NavBottom = () => {
           </li>
         ))}
       </ul>
+      <hr />
     </nav>
   );
 };
