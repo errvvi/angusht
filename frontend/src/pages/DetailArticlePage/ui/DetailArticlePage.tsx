@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-// import img from "@/shared/assets/articleImage.png";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 
 export const DetailArticlePage = () => {
@@ -36,7 +35,6 @@ export const DetailArticlePage = () => {
           <img className="w-full h-auto" src={item.img} />
           <div
             style={{
-              // minHeight: "80vh",
               paddingBottom: "100px",
               flexGrow: 1,
             }}
