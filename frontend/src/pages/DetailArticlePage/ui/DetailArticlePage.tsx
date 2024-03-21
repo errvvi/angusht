@@ -21,7 +21,10 @@ export const DetailArticlePage = () => {
     getArticle();
   }, []); // ИМИТАЦИЯ
   return (
-    <div ref={parent} className="flex justify-center items-center mt-5">
+    <div
+      ref={parent}
+      className="flex justify-center items-center mt-5 font-articleTitle font-bold"
+    >
       {article?.map((item) => (
         // <ArticleCard
         //   key={item.id}
@@ -40,11 +43,13 @@ export const DetailArticlePage = () => {
             className="bg-white rounded-b-3xl  flex flex-col gap-6 p-8 "
           >
             <div>
-              <p className="text-3xl font-bold ">{item.title}</p>
+              <p className="text-3xl font-articleTitle font-bold">
+                {item.title}
+              </p>
             </div>
 
             <div>
-              <p className="text-2xl ">{item.content}</p>
+              <p className="text-2xl font-articleContent ">{item.content}</p>
             </div>
           </div>
         </div>

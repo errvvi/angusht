@@ -15,6 +15,14 @@ module.exports = {
       fontSize: {
         small: "8px",
       },
+      fontFamily: {
+        article: "Tajawal Bold",
+        tableFont: "Jost SemiBold",
+        footer: "Roboto",
+        articlDetailTitle: "PT Serif Bold",
+        articleDetailContent: "PT Serif Caption Regular",
+        personCard: "Jost Medium",
+      },
     },
   },
   plugins: [],

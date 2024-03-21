@@ -46,7 +46,7 @@ function HomePage() {
 
         <div
           ref={parent}
-          className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 ml-12"
+          className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 ml-12 font-article"
         >
           {articles
             .slice(-6)
