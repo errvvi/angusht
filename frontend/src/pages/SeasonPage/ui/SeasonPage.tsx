@@ -13,7 +13,7 @@ function SeasonPage() {
     <div>
       <div className="flex justify-start ml-24">
         <nav className=" flex jus w-full">
-          <ul className="flex  h-20 text-white uppercase font-bold gap-32">
+          <ul className="flex  h-20 font-personCard text-white uppercase font-bold gap-32">
             {links.map((link, index) => (
               <li key={index}>
                 <Link

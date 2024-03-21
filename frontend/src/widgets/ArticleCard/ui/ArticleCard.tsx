@@ -1,5 +1,4 @@
 import React, { FC } from "react";
-import image from "@/shared/assets/articleImage.png";
 import { Link } from "react-router-dom";
 
 interface ArticleCardProps {
@@ -23,9 +22,9 @@ export const ArticleCard: FC<ArticleCardProps> = ({
       <div className="max-w-sm bg-white my-5 rounded-lg shadow dark:bg-gray-100 dark:border-gray-700">
         <img className="rounded-t-lg artimg" src={img} alt="" />
         <div className="p-2 h-36 flex flex-col">
-          <span className="text-customGreen mb-2 text-2xl font-bold tracking-tight">
+          <h1 className="text-customGreen mb-2 text-2xl font-bold tracking-tight">
             {title}
-          </span>
+          </h1>
 
           <div className="">
             <p className="text-black">{content}</p>

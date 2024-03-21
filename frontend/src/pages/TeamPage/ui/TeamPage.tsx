@@ -33,7 +33,7 @@ function TeamPage() {
     <div>
       <div ref={parent} className="flex flex-wrap gap-10 justify-center mt-10">
         <nav className=" flex jus w-full">
-          <ul className="flex ml-24  h-20 text-white uppercase font-bold gap-32">
+          <ul className="flex ml-24 font-personCard  h-20 text-white uppercase font-bold gap-32">
             {links.map((link, index) => (
               <li key={index}>
                 <Link
