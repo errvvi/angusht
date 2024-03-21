@@ -7,7 +7,7 @@ export const Footer = () => {
       <div className="">
         <p className="text-white font-black text-xs leading-3 text-center">
           © 1993-2024.
-          <br /> Футбольный клуб <br /> «Ангушт».
+          <br /> АНО ФК <br /> «Ангушт».
         </p>
       </div>
       <div>

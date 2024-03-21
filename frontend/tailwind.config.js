@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        tableHead: "#1B4332E5",
+        tableHead: "#1b4332e6",
+        tableHover: "#1b4332e6",
         customGreen: "#1B4332",
         matchTimetable: "#377E5E",
       },

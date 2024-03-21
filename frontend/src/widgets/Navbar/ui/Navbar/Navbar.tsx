@@ -11,7 +11,7 @@ export const Navbar = () => {
             <Logo />
             <div className="flex flex-col gap-3">
               <h1 className="text-customGreen font-black text-2xl">
-                ФУТБОЛЬНЫЙ КЛУБ “АНГУШТ”
+                АНО ФК “АНГУШТ”
               </h1>
               <h2 className="text-customGreen font-black">ОФИЦИАЛЬНЫЙ САЙТ</h2>
             </div>

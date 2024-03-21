@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import img from "@/shared/assets/articleImage.png";
+// import img from "@/shared/assets/articleImage.png";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 
 export const DetailArticlePage = () => {
@@ -13,7 +13,7 @@ export const DetailArticlePage = () => {
   useEffect(() => {
     const getArticle = async () => {
       const { data } = await axios.get(
-        `https://65f85cccdf151452460f3434.mockapi.io/api/articles/${id}`
+        `https://65fb4f6c14650eb21009ceba.mockapi.io/api/articles/${id}`
       );
       setArticle([data]);
     };
@@ -30,9 +30,13 @@ export const DetailArticlePage = () => {
         //   content={item.content}
         // />
         <div className="w-full h-auto">
-          <img className="w-full h-auto" src={img} />
+          <img className="w-full h-auto" src={item.img} />
           <div
-            style={{ minHeight: "80vh", flexGrow: 1 }}
+            style={{
+              // minHeight: "80vh",
+              paddingBottom: "100px",
+              flexGrow: 1,
+            }}
             className="bg-white rounded-b-3xl  flex flex-col gap-6 p-8 "
           >
             <div>
