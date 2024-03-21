@@ -37,7 +37,15 @@ function ClubPage() {
               для решения задачи выхода во второй дивизион. Мы с этой задачей
               справились!
             </p>
-            <span>#АНГУШТЧЕМПИОН</span>
+            <span className="mb-10">#АНГУШТЧЕМПИОН</span>
+          </div>
+          <h1 className=" pt-10 ml-10 text-2xl ">КОНТАКТЫ</h1>
+          <div className={cls.line}></div>
+          <div className="flex flex-col ">
+            <div className={cls.content}>
+              <p>АДРЕС: Республика Ингушетия г. Назрань ул. Фабричная 3 </p>
+              <p>Email: Angusht-93@mail.ru</p>
+            </div>
           </div>
         </div>
       </div>
