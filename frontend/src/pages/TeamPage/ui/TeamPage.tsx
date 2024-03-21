@@ -51,6 +51,7 @@ function TeamPage() {
   };
 
   return (
+    
     <div className="">
       <div
         ref={parent}
@@ -153,6 +154,7 @@ function TeamPage() {
             </div>
           </div>
         )}
+
       </div>
     </div>
   );

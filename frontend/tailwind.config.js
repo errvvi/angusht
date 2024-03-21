@@ -16,7 +16,7 @@ module.exports = {
         small: "8px",
       },
       fontFamily: {
-        article: "Tajawal Bold",
+        // article: "Tajawal Bold",
         tableFont: "Jost SemiBold",
         footer: "Roboto",
         articlDetailTitle: "PT Serif Bold",

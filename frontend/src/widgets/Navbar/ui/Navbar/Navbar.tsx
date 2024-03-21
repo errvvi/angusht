@@ -7,7 +7,7 @@ export const Navbar = () => {
     <div className={cls.navbar}>
       <div className="container mx-3">
         <div className={cls.wrap}>
-          <div className="flex gap-5">
+          <div className="flex gap-5 mt-3">
             <Logo />
             <div className="flex flex-col gap-3">
               <h1 className="text-customGreen font-black text-2xl">
