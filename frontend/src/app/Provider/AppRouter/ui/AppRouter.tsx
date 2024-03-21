@@ -21,11 +21,10 @@ const AppRouter = () => {
       <Route path="/news" element={<NewsPage />} />
       <Route path="/article/:id" element={<DetailArticlePage />} />
       <Route path="/season" element={<SeasonPage />}>
-        <Route index element={<ArticleCard />} /> // таблица
+        <Route index element={<Table />} /> // таблица
         <Route path="matchtimetable" element={<MatchTimetable />} />
       </Route>
       <Route path="/team" element={<TeamPage />}>
-        <Route path="Rukovodstvo" element={<TeamPage />} />
         <Route path="CoachingStaff" element={<TeamPage />} />
         <Route path="Footballers" element={<TeamPage />} />
         =======

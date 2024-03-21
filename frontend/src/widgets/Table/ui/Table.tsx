@@ -2,7 +2,7 @@ export const Table = () => {
   return (
     <div className="m-10 font-tableFont">
       <table className="shadow-2xl w-full">
-        <thead className="text-white bg-tableHead text-3xl">
+        <thead className="text-white bg-green-950 text-3xl">
           <th className="px-6 py-3 text-center ">#</th>
           <th className="px-6 py-3 text-center ">КОМАНДА</th>
           <th className="px-6 py-3 text-center ">И</th>
