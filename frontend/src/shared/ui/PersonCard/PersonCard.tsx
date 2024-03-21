@@ -5,7 +5,7 @@ interface PersonProps {
   jobTitle?: string;
   fio: string;
   id: string;
-  Role: string;
+  Role?: string;
 }
 
 export const PersonCard: FC<PersonProps> = ({ img, jobTitle, fio, id }) => {
