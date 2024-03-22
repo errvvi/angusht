@@ -44,7 +44,7 @@ function HomePage() {
           </div>
         </Link>
 
-        <article
+        <div
           ref={parent}
           className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 ml-12 font-article"
         >
@@ -59,7 +59,7 @@ function HomePage() {
                 img={article.img}
               />
             ))}
-        </article>
+        </div>
       </div>
       <div ref={parent} className="flex flex-col">
         <div className="w-full flex  ">

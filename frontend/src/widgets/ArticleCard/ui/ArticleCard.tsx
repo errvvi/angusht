@@ -19,7 +19,7 @@ export const ArticleCard: FC<ArticleCardProps> = ({
       className="hover:scale-105 transform transition duration-300 "
       to={`/article/${id}`}
     >
-      <div className="max-w-sm bg-white my-5 rounded-lg shadow dark:bg-gray-100 dark:border-gray-700">
+      <article className="max-w-sm bg-white my-5 rounded-lg shadow dark:bg-gray-100 dark:border-gray-700">
         <img className="rounded-t-lg artimg" src={img} alt="" />
         <div className="p-2 h-36 flex flex-col">
           <h1 className="text-customGreen mb-2 text-2xl font-bold tracking-tight">
@@ -30,7 +30,7 @@ export const ArticleCard: FC<ArticleCardProps> = ({
             <p className="text-black">{content}</p>
           </div>
         </div>
-      </div>
+      </article>
     </Link>
   );
 };

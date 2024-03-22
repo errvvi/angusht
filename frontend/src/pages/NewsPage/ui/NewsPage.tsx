@@ -20,7 +20,7 @@ function NewsPage() {
   }, []); // ИМИТАЦИЯ
   return (
     <div className="bg-customGreen">
-      <article
+      <div
         ref={parent}
         className=" grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 ml-12 font-article"
       >
@@ -32,7 +32,7 @@ function NewsPage() {
             title={article.title}
           />
         ))}
-      </article>
+      </div>
     </div>
   );
 }
