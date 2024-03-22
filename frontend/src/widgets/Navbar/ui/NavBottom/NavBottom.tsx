@@ -22,7 +22,7 @@ export const NavBottom = () => {
           <li key={index}>
             <Link
               className={ClassNames(
-                "pt-4 pb-4 pl-9 pr-9 text-xl select-none",
+                "py-4 px-9 text-xl select-none max-md:text-base max-md:py-2.5 max-md:px-6 max-sm:py-2 max-sm:px-4 max-sm:text-sm ",
                 {
                   [cls.active]:
                     currentPath === link[0] ||
