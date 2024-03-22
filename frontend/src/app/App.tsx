@@ -5,16 +5,23 @@ import { Footer } from "@/widgets/Footer/ui/Footer";
 const App = () => {
   return (
     <>
-      <Navbar />
-      <div className="container">
-        <div className="app app_normal">
-          <div className="container">
-            <AppRouter />
+      <header>
+        <Navbar />
+      </header>
+      <main>
+        <div className="container">
+          <div className="app app_normal">
+            <div className="container">
+              <AppRouter />
+            </div>
           </div>
         </div>
-      </div>
-      <Sponsors />
-      <Footer />
+        <Sponsors />
+      </main>
+
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 };
