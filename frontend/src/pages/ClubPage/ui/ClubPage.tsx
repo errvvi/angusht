@@ -1,5 +1,4 @@
 import cls from "./ClubPage.module.scss";
-import Angusht from "../../../shared/assets/other/Logo.png";
 function ClubPage() {
   return (
     <div className={cls.About}>
