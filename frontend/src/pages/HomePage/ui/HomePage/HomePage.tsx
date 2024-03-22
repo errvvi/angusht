@@ -34,7 +34,7 @@ function HomePage() {
 
   return (
     <div className="bg-customGreen flex flex-col">
-      <div className="Articles-part">
+      <section className="Articles-part">
         <Link to={"/news"}>
           <div className=" flex items-center gap-3 cursor-pointer">
             <Icon type="Vector" />
@@ -60,8 +60,8 @@ function HomePage() {
               />
             ))}
         </div>
-      </div>
-      <div ref={parent} className="flex flex-col">
+      </section>
+      <section ref={parent} className="flex flex-col">
         <div className="w-full flex  ">
           <div className="flex items-center gap-3 cursor-pointer">
             <Icon type="Vector" />
@@ -82,9 +82,9 @@ function HomePage() {
             />
           ))}
         </div>
-      </div>
+      </section>
 
-      <div className="tournament-table">
+      <section className="tournament-table">
         <Link to={"/season"}>
           <div className="flex items-center gap-3 cursor-pointer">
             <Icon type="Vector" />
@@ -94,7 +94,7 @@ function HomePage() {
           </div>
         </Link>
         <Table />
-      </div>
+      </section>
     </div>
   );
 }

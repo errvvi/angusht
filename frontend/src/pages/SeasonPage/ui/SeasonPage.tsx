@@ -10,7 +10,7 @@ function SeasonPage() {
     ["/season/matchtimetable", "Расписание"],
   ];
   return (
-    <div>
+    <section>
       <div className="flex justify-start ml-24">
         <nav className=" flex jus w-full">
           <ul className="flex  h-20 font-personCard text-white uppercase font-bold gap-32">
@@ -32,7 +32,7 @@ function SeasonPage() {
         </nav>
       </div>
       <Outlet />
-    </div>
+    </section>
   );
 }
 

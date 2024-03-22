@@ -19,7 +19,7 @@ export const MatchTimetable = () => {
     getMatchs();
   }, []); // ИМИТАЦИЯ
   return (
-    <div className="flex flex-col justify-center items-center gap-4">
+    <section className="flex flex-col justify-center items-center gap-4">
       <div className="w-full flex px-28 ">
         <div className="flex items-center gap-3 cursor-pointer">
           <Icon type="Vector" />
@@ -29,7 +29,10 @@ export const MatchTimetable = () => {
         </div>
       </div>
 
-      <div ref={parent} className="grid grid-cols-1 lg:grid-cols-2 gap-x-10 ">
+      <article
+        ref={parent}
+        className="grid grid-cols-1 lg:grid-cols-2 gap-x-10 "
+      >
         {matchs.map((match) => (
           <MatchTable
             key={match.id}
@@ -40,7 +43,7 @@ export const MatchTimetable = () => {
             teamTwo={match.teamTwo}
           />
         ))}
-      </div>
-    </div>
+      </article>
+    </section>
   );
 };

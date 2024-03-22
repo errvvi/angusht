@@ -1,13 +1,13 @@
 import cls from "./ClubPage.module.scss";
 function ClubPage() {
   return (
-    <div className={cls.About}>
+    <section className={cls.About}>
       <div className="flex-col pb-10 mr-14 ml-14 gap-7 ">
         <h1 className=" pt-10 ml-10 text-2xl ">О КЛУБЕ</h1>
         <div className={cls.line}></div>
 
         <div className="font-medium mt-7 text-xl">
-          <section>
+          <article>
             <div className={cls.content}>
               <p>
                 ФК «Ангушт» основан в 1993 году. Официальной датой создания
@@ -39,7 +39,7 @@ function ClubPage() {
               </p>
               <span className="mb-10">#АНГУШТЧЕМПИОН</span>
             </div>
-          </section>
+          </article>
 
           <h1 className=" pt-10 ml-10 text-2xl ">КОНТАКТЫ</h1>
           <div className={cls.line}></div>
@@ -53,7 +53,7 @@ function ClubPage() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

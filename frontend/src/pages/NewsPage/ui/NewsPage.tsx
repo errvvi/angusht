@@ -19,7 +19,7 @@ function NewsPage() {
     getArticles();
   }, []); // ИМИТАЦИЯ
   return (
-    <div className="bg-customGreen">
+    <section className="bg-customGreen">
       <div
         ref={parent}
         className=" grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 ml-12 font-article"
@@ -33,7 +33,7 @@ function NewsPage() {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 

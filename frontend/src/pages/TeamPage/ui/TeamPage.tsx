@@ -51,7 +51,7 @@ function TeamPage() {
   };
 
   return (
-    <div className="">
+    <section>
       <div
         ref={parent}
         className="flex flex-col flex-wrap gap-10 justify-center mt-10"
@@ -174,7 +174,7 @@ function TeamPage() {
           </div>
         )}
       </div>
-    </div>
+    </section>
   );
 }
 
