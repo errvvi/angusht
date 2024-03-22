@@ -70,7 +70,7 @@ function TeamPage() {
             </button>
           ))}
         </div>
-        <div className="flex flex-row flex-wrap gap-20">
+        <div className="flex flex-row flex-wrap gap-16">
           {PersonCards.map((person) => {
             if (person.Role !== "player") {
               return (
@@ -92,7 +92,7 @@ function TeamPage() {
                 <span className="text-white text-2xl">ВРАТАРИ</span>
                 <div className={cls.TeamLine}></div>
               </div>
-              <div className="flex flex-row gap-20">
+              <div className="flex flex-row gap-16">
                 {PersonCards.map((player) => {
                   if (player.playerPosition === "goalkeeper") {
                     return (
@@ -113,7 +113,7 @@ function TeamPage() {
                 <span className="text-white text-2xl">ЗАЩИТНИКИ</span>
                 <div className={cls.TeamLine}></div>
               </div>
-              <div className="flex flex-row flex-wrap gap-20">
+              <div className="flex flex-row flex-wrap gap-16">
                 {PersonCards.map((player) => {
                   if (player.playerPosition === "defender") {
                     return (
@@ -134,7 +134,7 @@ function TeamPage() {
                 <span className="text-white text-2xl">ПОЛУЗАЩИТНИКИ</span>
                 <div className={cls.TeamLine}></div>
               </div>
-              <div className="flex flex-row flex-wrap gap-20">
+              <div className="flex flex-row flex-wrap gap-16">
                 {PersonCards.map((player) => {
                   if (player.playerPosition === "midfielder") {
                     return (
@@ -155,7 +155,7 @@ function TeamPage() {
                 <span className="text-white text-2xl">НАПАДАЮЩИЕ</span>
                 <div className={cls.TeamLine}></div>
               </div>
-              <div className="flex flex-row flex-wrap gap-20">
+              <div className="flex flex-row flex-wrap gap-16">
                 {PersonCards.map((player) => {
                   if (player.playerPosition === "striker") {
                     return (
