@@ -56,11 +56,11 @@ function TeamPage() {
         ref={parent}
         className="flex flex-col flex-wrap gap-10 justify-center mt-10"
       >
-        <div className="flex gap-10">
+        <div className="flex gap-10 max-sm:gap-2">
           {buttons.map((item) => (
             <button
               className={ClassNames(
-                "pt-2 pb-2 pl-5 pr-5 font-tableFont",
+                "py-2 px-5 font-tableFont max-sm:py-0.5 px-0.5 max-sm:text-sm",
                 { [cls.active]: activeFilter === `${item[1]}` },
                 []
               )}
@@ -70,7 +70,7 @@ function TeamPage() {
             </button>
           ))}
         </div>
-        <div className="flex flex-row flex-wrap gap-16">
+        <div className="flex flex-row flex-wrap gap-16 max-sm:gap-8">
           {PersonCards.map((person) => {
             if (person.Role !== "player") {
               return (
@@ -86,13 +86,15 @@ function TeamPage() {
           })}
         </div>
         {activeFilter === "player" && (
-          <div className="flex flex-col gap-16">
+          <div className="flex flex-col gap-16 ">
             <div className="flex flex-col ">
               <div className="flex w-72 flex-col gap-0 mb-10 font-personCard text-center">
-                <span className="text-white text-2xl">ВРАТАРИ</span>
+                <span className="text-white text-2xl max-sm:text-lg">
+                  ВРАТАРИ
+                </span>
                 <div className={cls.TeamLine}></div>
               </div>
-              <div className="flex flex-row gap-16">
+              <div className="flex flex-row flex-wrap gap-16 max-sm:gap-12">
                 {PersonCards.map((player) => {
                   if (player.playerPosition === "goalkeeper") {
                     return (
@@ -108,12 +110,12 @@ function TeamPage() {
                 })}
               </div>
             </div>
-            <div className="flex flex-col flex-wrap gap-16">
+            <div className="flex flex-col flex-wrap ">
               <div className="flex w-72 flex-col gap-0 mb-10 font-personCard text-center">
                 <span className="text-white text-2xl">ЗАЩИТНИКИ</span>
                 <div className={cls.TeamLine}></div>
               </div>
-              <div className="flex flex-row flex-wrap gap-16">
+              <div className="flex flex-row flex-wrap gap-16 ">
                 {PersonCards.map((player) => {
                   if (player.playerPosition === "defender") {
                     return (
