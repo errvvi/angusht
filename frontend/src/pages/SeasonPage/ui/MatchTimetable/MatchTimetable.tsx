@@ -23,7 +23,7 @@ export const MatchTimetable = () => {
       <div className="w-full flex px-28 ">
         <div className="flex items-center gap-3 cursor-pointer">
           <Icon type="Vector" />
-          <span className="font-black text-white text-2xl">
+          <span className="font-black text-white text-2xl max-md:text-xl max-sm:text-base ">
             РАСПИСАНИЕ МАТЧЕЙ
           </span>
         </div>

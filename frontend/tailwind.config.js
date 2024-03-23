@@ -23,6 +23,9 @@ module.exports = {
         articleDetailContent: "PT Serif Caption Regular",
         personCard: "Jost Medium",
       },
+      screens: {
+        smallScr: "445px",
+      },
     },
   },
   plugins: [],
