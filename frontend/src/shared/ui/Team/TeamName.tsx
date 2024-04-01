@@ -1,4 +1,4 @@
-import Angusht from "../../assets/teams/FC_Angusht.png";
+import ANGUSHT from "../../assets/teams/FC_Angusht.png";
 import Alania from "../../assets/teams/Alaniya-2.png";
 import Astrakhan from "../../assets/teams/Astrakhan.png";
 import Biolog_Novokubansk from "../../assets/teams/Biolog-Novokubansk.png";
@@ -17,7 +17,7 @@ import Spartak_Nalchik from "../../assets/teams/Spartak_Nalchik.png";
 import Kuban_Holding from "../../assets/teams/Kuban_Xolding.png";
 
 export type TeamType =
-  | "Angusht"
+  | "ANGUSHT"
   | "Alania-2"
   | "Stroitel"
   | "Astrakhan"
@@ -36,7 +36,7 @@ export type TeamType =
   | "Kuban_Holding";
 
 export const TeamName: Record<TeamType, JSX.Element | string> = {
-  Angusht: <img src={Angusht} alt="Angusht" />,
+  ANGUSHT: <img src={ANGUSHT} alt="Angusht" />,
   Astrakhan: <img src={Astrakhan} alt="Astrakhan" />,
   "Alania-2": <img src={Alania} alt="Alania" />,
   Sevastopol: <img src={Sevastopol} alt="Sevastopol" />,

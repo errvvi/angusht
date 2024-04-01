@@ -25,7 +25,7 @@ export const MatchTable: FC<MatchTimetableProps> = ({
     "Dinamo_Mahachkala-2": `ДИНАМО-2 <br/> ${spanText}(Махачкала)</span>`,
     Dinamo_Stavropol: `ДИНАМО СТАВРОПОЛЬ <br/> ${spanText}(Ставрополь)</span>`,
     Druzhba: `ДРУЖБА <br/> ${spanText}(Майкоп)</span>`,
-    Angusht: `Ангушт <br/> ${spanText}(Назрань)</span>`,
+    ANGUSHT: `Ангушт <br/> ${spanText}(Назрань)</span>`,
     FC_Forte: `ФОРТЕ <br/> ${spanText}(Таганрог)</span>`,
     "FC_Rostov-2": `РОСТОВ-2 <br/> ${spanText}(Ростов-на-Дону)</span>`,
     fkNartLogo: `Ангушт <br/> ${spanText}(Назрань)</span>`,
