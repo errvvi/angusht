@@ -12,6 +12,7 @@ import LeonBets from "../../assets/sponsor/leonbets.png";
 
 import FlagRussian from "../../assets/other/flagRussian.png";
 
+import BurgerMenu from "../../assets/svg/burgerMenu.svg";
 export type IconType =
   | "Telegram"
   | "TelegramWhite"
@@ -23,7 +24,8 @@ export type IconType =
   | "Sports"
   | "Leon"
   | "LeonBets"
-  | "FlagRussian";
+  | "FlagRussian"
+  | "BurgerMenu";
 
 export const IconName: Partial<Record<IconType, JSX.Element>> = {
   Telegram: <Telegram />,
@@ -37,4 +39,5 @@ export const IconName: Partial<Record<IconType, JSX.Element>> = {
   Leon: <img src={Leon} />,
   LeonBets: <img src={LeonBets} />,
   FlagRussian: <img src={FlagRussian} />,
+  BurgerMenu: <BurgerMenu />,
 };
