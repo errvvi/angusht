@@ -14,6 +14,7 @@ module.exports = {
       },
       fontSize: {
         small: "8px",
+        tenPx: "10px",
       },
       fontFamily: {
         // article: "Tajawal Bold",
