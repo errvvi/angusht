@@ -1,8 +1,7 @@
-import React, { FC } from "react";
-import { Icon } from "../Icon/Icon";
-import { Team } from "../Team/Team";
-import { TeamType } from "../Team/TeamName";
-interface MatchTimetableProps {
+import { FC } from "react";
+import { Team } from "../../../shared/ui/Team/Team";
+import { TeamType } from "../../../shared/ui/Team/TeamName";
+export interface MatchTimetableProps {
   tour?: number;
   data?: string;
   score?: string;
