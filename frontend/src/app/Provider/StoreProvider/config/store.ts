@@ -1,12 +1,13 @@
 import { Reducer, ReducersMapObject, configureStore } from "@reduxjs/toolkit";
 import { StateSchema } from "./StateSchema";
-import { articleReducer } from "@/entities";
+import { articleReducer, personCardReducer } from "@/entities";
 import { matchReducer } from "@/entities/MatchTable/model/slice/matchTableSlice";
 
 export const createStore = () => {
   const rootReducer: ReducersMapObject<StateSchema> = {
     article: articleReducer,
     match: matchReducer,
+    person: personCardReducer,
   };
 
   const store = configureStore({

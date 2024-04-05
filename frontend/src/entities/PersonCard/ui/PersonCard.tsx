@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 
-interface PersonProps {
+export interface PersonProps {
   img: string;
   jobTitle?: string;
   fio: string;

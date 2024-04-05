@@ -1,53 +1,38 @@
-import { PersonCard } from "@/shared/ui/PersonCard/PersonCard";
+import { PersonCard } from "@/entities/PersonCard/ui/PersonCard";
 import cls from "./TeamPage.module.scss";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
-import axios from "axios";
-import { useLocation } from "react-router-dom";
 import { ClassNames } from "@/shared/lib/classNames";
+import { useAppDispatch } from "@/shared/hooks/useAppDispatch";
+import { getPersons } from "../model/service/getPersons";
+import { useSelector } from "react-redux";
+import { getDataPersons } from "@/entities/PersonCard/model/selectors/getDataPersons";
+import { getPersonsInited } from "@/entities/PersonCard/model/selectors/getPersonsInited";
 interface PersonCard {
   id: number;
   name: string;
   role: string;
 }
 function TeamPage() {
-  const location = useLocation();
-  const currentPath = location.pathname;
   const buttons = [
     ["РУКОВОДСТВО КЛУБА", "Rukovodstvo"],
     ["ТРЕНЕРСКИЙ ШТАБ", "Staff"],
     ["СОСТАВ КОМАНДЫ", "player"],
   ];
 
-  const [PersonCards, SetPersonCards] = useState([]);
+  const personCards = useSelector(getDataPersons);
+  const initedPersonCard = useSelector(getPersonsInited);
   const [parent, enableAnimations] = useAutoAnimate(/*optional config */);
   const [activeFilter, setActiveFilter] = useState("Rukovodstvo");
-
-  const fetchCards = async (filterParam: string) => {
-    const params = {
-      Role: filterParam,
-    };
-
-    const { data } = await axios.get(
-      "https://65fb4f6c14650eb21009ceba.mockapi.io/api/HumanCard",
-      { params }
-    );
-    SetPersonCards(data);
-  };
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
-    const getCards = async () => {
-      fetchCards("Rukovodstvo");
-    };
-
-    getCards();
-  }, []);
-
-  const handleFilterClick = (filterParam: string) => {
-    if (filterParam !== activeFilter) {
-      setActiveFilter(filterParam);
-      fetchCards(filterParam);
+    if (!initedPersonCard) {
+      dispatch(getPersons());
     }
+  }, [initedPersonCard, personCards]);
+  const handleClick = (param: string) => {
+    setActiveFilter(param);
   };
 
   return (
@@ -64,117 +49,134 @@ function TeamPage() {
                 { [cls.active]: activeFilter === `${item[1]}` },
                 []
               )}
-              onClick={() => handleFilterClick(`${item[1]}`)}
+              onClick={() => handleClick(item[1])}
             >
               {item[0]}
             </button>
           ))}
         </div>
         <div className="flex flex-row flex-wrap gap-16 max-sm:gap-8">
-          {PersonCards.map((person) => {
-            if (person.Role !== "player") {
-              return (
-                <PersonCard
-                  key={person.id}
-                  img={person.img}
-                  jobTitle={person.jobTitle}
-                  fio={person.FIO}
-                  id={person.id}
-                />
-              );
-            }
-          })}
+          {activeFilter === "Rukovodstvo" &&
+            personCards
+              .filter((person) => person.Role === "Rukovodstvo")
+              .map((person) => {
+                return (
+                  <PersonCard
+                    key={person.id}
+                    img={person.img}
+                    jobTitle={person.jobTitle}
+                    fio={person.FIO}
+                    id={person.id}
+                  />
+                );
+              })}
+          {activeFilter === "Staff" &&
+            personCards
+              .filter((person) => person.Role === "Staff")
+              .map((person) => {
+                return (
+                  <PersonCard
+                    key={person.id}
+                    img={person.img}
+                    jobTitle={person.jobTitle}
+                    fio={person.FIO}
+                    id={person.id}
+                  />
+                );
+              })}
         </div>
-        {activeFilter === "player" && (
-          <div className="flex flex-col gap-16 ">
-            <div className="flex flex-col ">
-              <div className="flex w-72 flex-col gap-0 mb-10 font-personCard text-center">
-                <span className="text-white text-2xl max-sm:text-lg">
-                  ВРАТАРИ
-                </span>
-                <div className={cls.TeamLine}></div>
+        <div>
+          {activeFilter === "player" && (
+            <div className="flex flex-col gap-16 ">
+              <div className="flex flex-col ">
+                <div className="flex w-72 flex-col gap-0 mb-10 font-personCard text-center">
+                  <span className="text-white text-2xl max-sm:text-lg">
+                    ВРАТАРИ
+                  </span>
+                  <div className={cls.TeamLine}></div>
+                </div>
+                <div className="flex flex-row flex-wrap gap-16 max-sm:gap-12">
+                  {personCards.map((player) => {
+                    if (player.playerPosition === "goalkeeper") {
+                      return (
+                        <PersonCard
+                          key={player.id}
+                          img={player.img}
+                          jobTitle={player.jobTitle}
+                          fio={player.FIO}
+                          id={player.id}
+                        />
+                      );
+                    }
+                  })}
+                </div>
               </div>
-              <div className="flex flex-row flex-wrap gap-16 max-sm:gap-12">
-                {PersonCards.map((player) => {
-                  if (player.playerPosition === "goalkeeper") {
-                    return (
-                      <PersonCard
-                        key={player.id}
-                        img={player.img}
-                        jobTitle={player.jobTitle}
-                        fio={player.FIO}
-                        id={player.id}
-                      />
-                    );
-                  }
-                })}
+              <div className="flex flex-col flex-wrap ">
+                <div className="flex w-72 flex-col gap-0 mb-10 font-personCard text-center">
+                  <span className="text-white text-2xl">ЗАЩИТНИКИ</span>
+                  <div className={cls.TeamLine}></div>
+                </div>
+                <div className="flex flex-row flex-wrap gap-16 ">
+                  {personCards.map((player) => {
+                    if (player.playerPosition === "defender") {
+                      return (
+                        <PersonCard
+                          key={player.id}
+                          img={player.img}
+                          jobTitle={player.jobTitle}
+                          fio={player.FIO}
+                          id={player.id}
+                        />
+                      );
+                    }
+                  })}
+                </div>
+              </div>
+              <div className="">
+                <div className="flex w-72 flex-col gap-0 mb-10 font-personCard text-center">
+                  <span className="text-white text-2xl">ПОЛУЗАЩИТНИКИ</span>
+                  <div className={cls.TeamLine}></div>
+                </div>
+                <div className="flex flex-row flex-wrap gap-16">
+                  {personCards.map((player) => {
+                    if (player.playerPosition === "midfielder") {
+                      return (
+                        <PersonCard
+                          key={player.id}
+                          img={player.img}
+                          jobTitle={player.jobTitle}
+                          fio={player.FIO}
+                          id={player.id}
+                        />
+                      );
+                    }
+                  })}
+                </div>
+              </div>
+              <div className="">
+                <div className="flex w-72 flex-col gap-0 mb-10 font-personCard text-center">
+                  <span className="text-white text-2xl">НАПАДАЮЩИЕ</span>
+                  <div className={cls.TeamLine}></div>
+                </div>
+                <div className="flex flex-row flex-wrap gap-16">
+                  {personCards.map((player) => {
+                    if (player.playerPosition === "striker") {
+                      return (
+                        <PersonCard
+                          key={player.id}
+                          img={player.img}
+                          jobTitle={player.jobTitle}
+                          fio={player.FIO}
+                          id={player.id}
+                        />
+                      );
+                    }
+                  })}
+                </div>
               </div>
             </div>
-            <div className="flex flex-col flex-wrap ">
-              <div className="flex w-72 flex-col gap-0 mb-10 font-personCard text-center">
-                <span className="text-white text-2xl">ЗАЩИТНИКИ</span>
-                <div className={cls.TeamLine}></div>
-              </div>
-              <div className="flex flex-row flex-wrap gap-16 ">
-                {PersonCards.map((player) => {
-                  if (player.playerPosition === "defender") {
-                    return (
-                      <PersonCard
-                        key={player.id}
-                        img={player.img}
-                        jobTitle={player.jobTitle}
-                        fio={player.FIO}
-                        id={player.id}
-                      />
-                    );
-                  }
-                })}
-              </div>
-            </div>
-            <div className="">
-              <div className="flex w-72 flex-col gap-0 mb-10 font-personCard text-center">
-                <span className="text-white text-2xl">ПОЛУЗАЩИТНИКИ</span>
-                <div className={cls.TeamLine}></div>
-              </div>
-              <div className="flex flex-row flex-wrap gap-16">
-                {PersonCards.map((player) => {
-                  if (player.playerPosition === "midfielder") {
-                    return (
-                      <PersonCard
-                        key={player.id}
-                        img={player.img}
-                        jobTitle={player.jobTitle}
-                        fio={player.FIO}
-                        id={player.id}
-                      />
-                    );
-                  }
-                })}
-              </div>
-            </div>
-            <div className="">
-              <div className="flex w-72 flex-col gap-0 mb-10 font-personCard text-center">
-                <span className="text-white text-2xl">НАПАДАЮЩИЕ</span>
-                <div className={cls.TeamLine}></div>
-              </div>
-              <div className="flex flex-row flex-wrap gap-16">
-                {PersonCards.map((player) => {
-                  if (player.playerPosition === "striker") {
-                    return (
-                      <PersonCard
-                        key={player.id}
-                        img={player.img}
-                        jobTitle={player.jobTitle}
-                        fio={player.FIO}
-                        id={player.id}
-                      />
-                    );
-                  }
-                })}
-              </div>
-            </div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </section>
   );
