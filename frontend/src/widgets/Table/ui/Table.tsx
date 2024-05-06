@@ -13,198 +13,202 @@ export const Table = () => {
       </thead>
       <tbody>
         <tr className="hover:bg-neutral-300 text-xl bg-white">
-          <td className="text-2xl text-center py-3 px-6 font-semibold">1</td>
+          <td className="text-2xl text-center py-3 px-6 ">1</td>
+          <td className="text-center py-3 px-6 ">Рубин Ялта (Ялта)</td>
+          <td className="text-center py-3 px-6 ">4</td>
+          <td className="text-center py-3 px-6 ">4</td>
+          <td className="text-center py-3 px-6 ">0</td>
+          <td className="text-center py-3 px-6 ">0</td>
+          <td className="text-center py-3 px-6 ">8:1</td>
+          <td className="text-center py-3 px-6 ">12</td>
+        </tr>
+        <tr className="hover:bg-neutral-300 text-xl bg-white">
+          <td className="text-2xl text-center py-3 px-6 font-semibold">2</td>
           <td className="text-center py-3 px-6 font-semibold">
             Астрахань (Астрахань)
           </td>
-          <td className="text-center py-3 px-6 font-semibold">1</td>
-          <td className="text-center py-3 px-6 font-semibold">1</td>
-          <td className="text-center py-3 px-6 font-semibold">0</td>
-          <td className="text-center py-3 px-6 font-semibold">0</td>
-          <td className="text-center py-3 px-6 font-semibold">3:0</td>
+          <td className="text-center py-3 px-6 font-semibold">4</td>
           <td className="text-center py-3 px-6 font-semibold">3</td>
+          <td className="text-center py-3 px-6 font-semibold">1</td>
+          <td className="text-center py-3 px-6 font-semibold">0</td>
+          <td className="text-center py-3 px-6 font-semibold">6:1</td>
+          <td className="text-center py-3 px-6 font-semibold">10</td>
         </tr>
         <tr className="hover:bg-neutral-300 text-xl bg-white">
-          <td className="text-2xl text-center py-3 px-6 ">2</td>
-          <td className="text-center py-3 px-6 ">Рубин Ялта (Ялта)</td>
-          <td className="text-center py-3 px-6 ">1</td>
-          <td className="text-center py-3 px-6 ">1</td>
-          <td className="text-center py-3 px-6 ">0</td>
-          <td className="text-center py-3 px-6 ">0</td>
-          <td className="text-center py-3 px-6 ">3:0</td>
+          <td className="text-2xl text-center py-3 px-6 font-semibold">3</td>
+          <td className="text-center py-3 px-6 font-semibold">
+            Легион (Махачкала)
+          </td>
+          <td className="text-center py-3 px-6 ">4</td>
           <td className="text-center py-3 px-6 ">3</td>
+          <td className="text-center py-3 px-6 ">0</td>
+          <td className="text-center py-3 px-6 ">1</td>
+          <td className="text-center py-3 px-6 ">6:3</td>
+          <td className="text-center py-3 px-6 ">9</td>
         </tr>
         <tr className="hover:bg-neutral-300 text-xl bg-white">
-          <td className="text-2xl text-center py-3 px-6 ">3</td>
-          <td className="text-center py-3 px-6 ">Форте (Таганрог)</td>
-          <td className="text-center py-3 px-6 ">1</td>
-          <td className="text-center py-3 px-6 ">1</td>
-          <td className="text-center py-3 px-6 ">0</td>
-          <td className="text-center py-3 px-6 ">0</td>
-          <td className="text-center py-3 px-6 ">5:3</td>
-          <td className="text-center py-3 px-6 ">3</td>
-        </tr>
-        <tr className="hover:bg-neutral-300 text-xl bg-white">
-          <td className="text-2xl text-center py-3 px-6 ">4</td>
-          <td className="text-center py-3 px-6 ">Дружба (Майкоп)</td>
-          <td className="text-center py-3 px-6 ">1</td>
-          <td className="text-center py-3 px-6 ">1</td>
-          <td className="text-center py-3 px-6 ">0</td>
-          <td className="text-center py-3 px-6 ">0</td>
-          <td className="text-center py-3 px-6 ">2:1</td>
-          <td className="text-center py-3 px-6 ">3</td>
+          <td className="text-2xl text-center py-3 px-6 font-semibold">4</td>
+          <td className="text-center py-3 px-6 font-semibold">
+            Биолог Новокубанск (п.Прогресс)
+          </td>
+          <td className="text-center py-3 px-6">3</td>
+          <td className="text-center py-3 px-6">2</td>
+          <td className="text-center py-3 px-6">1</td>
+          <td className="text-center py-3 px-6">0</td>
+          <td className="text-center py-3 px-6">6:4</td>
+          <td className="text-center py-3 px-6">7</td>
         </tr>
         <tr className="hover:bg-neutral-300 text-xl bg-white">
           <td className="text-2xl text-center py-3 px-6 font-semibold">5</td>
           <td className="text-center py-3 px-6 font-semibold">
-            Легион (Махачкала)
+            Ростов-2 (Ростов-на-Дону)
           </td>
-          <td className="text-center py-3 px-6 ">1</td>
-          <td className="text-center py-3 px-6 ">1</td>
-          <td className="text-center py-3 px-6 ">0</td>
-          <td className="text-center py-3 px-6 ">0</td>
-          <td className="text-center py-3 px-6 ">2:1</td>
-          <td className="text-center py-3 px-6 ">3</td>
+          <td className="text-center py-3 px-6 ">4</td>
+          <td className="text-center py-3 px-6 font-semibold">2</td>
+          <td className="text-center py-3 px-6 font-semibold">0</td>
+          <td className="text-center py-3 px-6 font-semibold">2</td>
+          <td className="text-center py-3 px-6 font-semibold">11:5</td>
+          <td className="text-center py-3 px-6 font-semibold">6</td>
         </tr>
         <tr className="hover:bg-neutral-300 text-xl bg-white">
-          <td className="text-2xl text-center py-3 px-6 font-semibold">6</td>
-          <td className="text-center py-3 px-6 font-semibold">
-            Динамо Ставрополь (Ставрополь)
+          <td className="text-2xl text-center py-3 px-6 ">6</td>
+          <td className="text-center py-3 px-6 ">
+            Строитель (Каменск-Шахтинский)
           </td>
-          <td className="text-center py-3 px-6 font-semibold">1</td>
-          <td className="text-center py-3 px-6 font-semibold">0</td>
-          <td className="text-center py-3 px-6 font-semibold">1</td>
-          <td className="text-center py-3 px-6 font-semibold">0</td>
-          <td className="text-center py-3 px-6 font-semibold">2:2</td>
-          <td className="text-center py-3 px-6 font-semibold">1</td>
+          <td className="text-center py-3 px-6 ">3</td>
+          <td className="text-center py-3 px-6 ">2</td>
+          <td className="text-center py-3 px-6 ">0</td>
+          <td className="text-center py-3 px-6 ">1</td>
+          <td className="text-center py-3 px-6 ">4:4</td>
+          <td className="text-center py-3 px-6 ">6</td>
         </tr>
         <tr className="hover:bg-neutral-300 text-xl bg-white">
           <td className="text-2xl text-center py-3 px-6 font-semibold">7</td>
           <td className="text-center py-3 px-6 font-semibold">
-            Победа (Хасавюрт)
+            Кубань Холдинг (ст.Павловская)
           </td>
+          <td className="text-center py-3 px-6 font-semibold">4</td>
           <td className="text-center py-3 px-6 font-semibold">1</td>
-          <td className="text-center py-3 px-6 font-semibold">0</td>
+          <td className="text-center py-3 px-6 font-semibold">2</td>
           <td className="text-center py-3 px-6 font-semibold">1</td>
-          <td className="text-center py-3 px-6 font-semibold">0</td>
-          <td className="text-center py-3 px-6 font-semibold">2:2</td>
-          <td className="text-center py-3 px-6 font-semibold">1</td>
+          <td className="text-center py-3 px-6 font-semibold">6:6</td>
+          <td className="text-center py-3 px-6 font-semibold">5</td>
         </tr>
         <tr className="hover:bg-neutral-300 text-xl bg-white">
           <td className="text-2xl text-center py-3 px-6 font-semibold">8</td>
           <td className="text-center py-3 px-6 font-semibold">
-            Биолог Новокубанск (п.Прогресс)
+            Динамо Ставрополь (Ставрополь)
           </td>
-          <td className="text-center py-3 px-6">1</td>
-          <td className="text-center py-3 px-6">0</td>
-          <td className="text-center py-3 px-6">1</td>
-          <td className="text-center py-3 px-6">0</td>
-          <td className="text-center py-3 px-6">2:2</td>
-          <td className="text-center py-3 px-6">1</td>
+          <td className="text-center py-3 px-6 font-semibold">4</td>
+          <td className="text-center py-3 px-6 font-semibold">1</td>
+          <td className="text-center py-3 px-6 font-semibold">2</td>
+          <td className="text-center py-3 px-6 font-semibold">1</td>
+          <td className="text-center py-3 px-6 font-semibold">4:5</td>
+          <td className="text-center py-3 px-6 font-semibold">5</td>
         </tr>
         <tr className="hover:bg-neutral-300 text-xl bg-white">
           <td className="text-2xl text-center py-3 px-6 font-semibold">9</td>
           <td className="text-center py-3 px-6 font-semibold">
-            Спартак-Нальчик (Нальчик)
+            Севастополь (Севастополь)
           </td>
+          <td className="text-center py-3 px-6 font-semibold">3</td>
           <td className="text-center py-3 px-6 font-semibold">1</td>
-          <td className="text-center py-3 px-6 font-semibold">0</td>
           <td className="text-center py-3 px-6 font-semibold">1</td>
-          <td className="text-center py-3 px-6 font-semibold">0</td>
+          <td className="text-center py-3 px-6 font-semibold">1</td>
           <td className="text-center py-3 px-6 font-semibold">2:2</td>
-          <td className="text-center py-3 px-6 font-semibold">1</td>
+          <td className="text-center py-3 px-6 font-semibold">4</td>
         </tr>
         <tr className="hover:bg-neutral-300 text-xl bg-white">
-          <td className="text-2xl text-center py-3 px-6 font-semibold">10</td>
-          <td className="text-center py-3 px-6 font-semibold">
-            Ангушт (Назрань)
-          </td>
+          <td className="text-2xl text-center py-3 px-6 ">10</td>
+          <td className="text-center py-3 px-6 ">Форте (Таганрог)</td>
+          <td className="text-center py-3 px-6 ">3</td>
+          <td className="text-center py-3 px-6 ">1</td>
           <td className="text-center py-3 px-6 ">0</td>
-          <td className="text-center py-3 px-6 ">0</td>
-          <td className="text-center py-3 px-6 ">0</td>
-          <td className="text-center py-3 px-6 ">0</td>
-          <td className="text-center py-3 px-6 ">0:0</td>
-          <td className="text-center py-3 px-6 ">0</td>
+          <td className="text-center py-3 px-6 ">2</td>
+          <td className="text-center py-3 px-6 ">5:5</td>
+          <td className="text-center py-3 px-6 ">3</td>
         </tr>
+
         <tr className="hover:bg-neutral-300 text-xl bg-white">
-          <td className="text-2xl text-center py-3 px-6">11</td>
-          <td className="text-center py-3 px-6">Динамо-2 (Махачкала)</td>
-          <td className="text-center py-3 px-6">0</td>
-          <td className="text-center py-3 px-6">0</td>
-          <td className="text-center py-3 px-6">0</td>
-          <td className="text-center py-3 px-6">0</td>
-          <td className="text-center py-3 px-">0:0</td>
-          <td className="text-center py-3 px-6">0</td>
+          <td className="text-2xl text-center py-3 px-6 ">11</td>
+          <td className="text-center py-3 px-6 ">Дружба (Майкоп)</td>
+          <td className="text-center py-3 px-6 ">4</td>
+          <td className="text-center py-3 px-6 ">1</td>
+          <td className="text-center py-3 px-6 ">0</td>
+          <td className="text-center py-3 px-6 ">2</td>
+          <td className="text-center py-3 px-6 ">3:5</td>
+          <td className="text-center py-3 px-6 ">3</td>
         </tr>
+
         <tr className="hover:bg-neutral-300 text-xl bg-white">
           <td className="text-2xl text-center py-3 px-6 font-semibold">12</td>
           <td className="text-center py-3 px-6 font-semibold">
-            Севастополь (Севастополь)
+            Спартак-Нальчик (Нальчик)
           </td>
+          <td className="text-center py-3 px-6 font-semibold">4</td>
           <td className="text-center py-3 px-6 font-semibold">0</td>
-          <td className="text-center py-3 px-6 font-semibold">0</td>
-          <td className="text-center py-3 px-6 font-semibold">0</td>
-          <td className="text-center py-3 px-6 font-semibold">0</td>
-          <td className="text-center py-3 px-6 font-semibold">0:0</td>
-          <td className="text-center py-3 px-6 font-semibold">0</td>
+          <td className="text-center py-3 px-6 font-semibold">3</td>
+          <td className="text-center py-3 px-6 font-semibold">1</td>
+          <td className="text-center py-3 px-6 font-semibold">7:8</td>
+          <td className="text-center py-3 px-6 font-semibold">3</td>
         </tr>
         <tr className="hover:bg-neutral-300 text-xl bg-white">
           <td className="text-2xl text-center py-3 px-6 font-semibold">13</td>
           <td className="text-center py-3 px-6 font-semibold">
-            Кубань Холдинг (ст.Павловская)
+            Победа (Хасавюрт)
           </td>
+          <td className="text-center py-3 px-6 font-semibold">4</td>
+          <td className="text-center py-3 px-6 font-semibold">0</td>
+          <td className="text-center py-3 px-6 font-semibold">3</td>
           <td className="text-center py-3 px-6 font-semibold">1</td>
-          <td className="text-center py-3 px-6 font-semibold">0</td>
-          <td className="text-center py-3 px-6 font-semibold">0</td>
-          <td className="text-center py-3 px-6 font-semibold">1</td>
-          <td className="text-center py-3 px-6 font-semibold">1:2</td>
-          <td className="text-center py-3 px-6 font-semibold">0</td>
+          <td className="text-center py-3 px-6 font-semibold">5:6</td>
+          <td className="text-center py-3 px-6 font-semibold">3</td>
         </tr>
+
         <tr className="hover:bg-neutral-300 text-xl bg-white">
           <td className="text-2xl text-center py-3 px-6 font-semibold">14</td>
           <td className="text-center py-3 px-6 font-semibold">
-            Ростов-2 (Ростов-на-Дону)
-          </td>
-          <td className="text-center py-3 px-6 ">1</td>
-          <td className="text-center py-3 px-6 font-semibold">0</td>
-          <td className="text-center py-3 px-6 font-semibold">0</td>
-          <td className="text-center py-3 px-6 font-semibold">1</td>
-          <td className="text-center py-3 px-6 font-semibold">1:2</td>
-          <td className="text-center py-3 px-6 font-semibold">0</td>
-        </tr>
-        <tr className="hover:bg-neutral-300 text-xl bg-white">
-          <td className="text-2xl text-center py-3 px-6">15</td>
-          <td className="text-center py-3 px-6">Алания-2 (Владикавказ)</td>
-          <td className="text-center py-3 px-6">1</td>
-          <td className="text-center py-3 px-6">0</td>
-          <td className="text-center py-3 px-6">0</td>
-          <td className="text-center py-3 px-6">1</td>
-          <td className="text-center py-3 px-6">3:5</td>
-          <td className="text-center py-3 px-6">0</td>
-        </tr>
-        <tr className="hover:bg-neutral-300 text-xl bg-white">
-          <td className="text-2xl text-center py-3 px-6 font-semibold">16</td>
-          <td className="text-center py-3 px-6 font-semibold">
             Нарт (Черкесск)
           </td>
+          <td className="text-center py-3 px-6 ">4</td>
+          <td className="text-center py-3 px-6 ">0</td>
+          <td className="text-center py-3 px-6 ">3</td>
           <td className="text-center py-3 px-6 ">1</td>
+          <td className="text-center py-3 px-6 ">3:6</td>
+          <td className="text-center py-3 px-6 ">3</td>
+        </tr>
+
+        <tr className="hover:bg-neutral-300 text-xl bg-white">
+          <td className="text-2xl text-center py-3 px-6 font-semibold">15</td>
+          <td className="text-center py-3 px-6 font-semibold">
+            Ангушт (Назрань)
+          </td>
+          <td className="text-center py-3 px-6 ">3</td>
           <td className="text-center py-3 px-6 ">0</td>
-          <td className="text-center py-3 px-6 ">0</td>
+          <td className="text-center py-3 px-6 ">2</td>
           <td className="text-center py-3 px-6 ">1</td>
-          <td className="text-center py-3 px-6 ">0:3</td>
-          <td className="text-center py-3 px-6 ">0</td>
+          <td className="text-center py-3 px-6 ">1:3</td>
+          <td className="text-center py-3 px-6 ">2</td>
         </tr>
         <tr className="hover:bg-neutral-300 text-xl bg-white">
-          <td className="text-2xl text-center py-3 px-6 ">17</td>
-          <td className="text-center py-3 px-6 ">
-            Строитель (Каменск-Шахтинский)
-          </td>
-          <td className="text-center py-3 px-6 ">1</td>
-          <td className="text-center py-3 px-6 ">0</td>
-          <td className="text-center py-3 px-6 ">0</td>
-          <td className="text-center py-3 px-6 ">1</td>
-          <td className="text-center py-3 px-6 ">0:3</td>
-          <td className="text-center py-3 px-6 ">0</td>
+          <td className="text-2xl text-center py-3 px-6">16</td>
+          <td className="text-center py-3 px-6">Динамо-2 (Махачкала)</td>
+          <td className="text-center py-3 px-6">3</td>
+          <td className="text-center py-3 px-6">0</td>
+          <td className="text-center py-3 px-6">1</td>
+          <td className="text-center py-3 px-6">2</td>
+          <td className="text-center py-3 px-">1:5</td>
+          <td className="text-center py-3 px-6">1</td>
+        </tr>
+        <tr className="hover:bg-neutral-300 text-xl bg-white">
+          <td className="text-2xl text-center py-3 px-6">17</td>
+          <td className="text-center py-3 px-6">Алания-2 (Владикавказ)</td>
+          <td className="text-center py-3 px-6">4</td>
+          <td className="text-center py-3 px-6">0</td>
+          <td className="text-center py-3 px-6">1</td>
+          <td className="text-center py-3 px-6">3</td>
+          <td className="text-center py-3 px-6">5:14</td>
+          <td className="text-center py-3 px-6">1</td>
         </tr>
       </tbody>
     </table>

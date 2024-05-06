@@ -32,8 +32,22 @@ export const DetailArticlePage = () => {
           //   title={item.title}
           //   content={item.content}
           // />
+
           <div className="w-full h-auto">
-            <img className="w-full h-auto" src={item.img} />
+            {item.video ? (
+              <iframe
+                className="w-full"
+                height="600"
+                src={item.video}
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
+            ) : (
+              <img className="w-full h-auto" src={item.img} />
+            )}
             <div
               style={{
                 paddingBottom: "100px",
@@ -48,7 +62,10 @@ export const DetailArticlePage = () => {
               </div>
 
               <div>
-                <p className="text-2xl font-articleContent ">{item.content}</p>
+                <p
+                  className="text-2xl font-articleContent "
+                  dangerouslySetInnerHTML={{ __html: item.content }}
+                ></p>
               </div>
             </div>
           </div>

@@ -15,7 +15,7 @@ interface PersonCard {
 }
 function TeamPage() {
   const buttons = [
-    ["РУКОВОДСТВО КЛУБА", "Rukovodstvo"],
+    // ["РУКОВОДСТВО КЛУБА", "Rukovodstvo"],
     ["ТРЕНЕРСКИЙ ШТАБ", "Staff"],
     ["СОСТАВ КОМАНДЫ", "player"],
   ];
@@ -23,7 +23,7 @@ function TeamPage() {
   const personCards = useSelector(getDataPersons);
   const initedPersonCard = useSelector(getPersonsInited);
   const [parent, enableAnimations] = useAutoAnimate(/*optional config */);
-  const [activeFilter, setActiveFilter] = useState("Rukovodstvo");
+  const [activeFilter, setActiveFilter] = useState("Staff");
   const dispatch = useAppDispatch();
 
   useEffect(() => {
@@ -45,7 +45,7 @@ function TeamPage() {
           {buttons.map((item) => (
             <button
               className={ClassNames(
-                "py-2 px-5 font-tableFont max-sm:py-0.5 px-0.5 max-sm:text-sm",
+                "py-2 px-5 font-tableFont max-sm:py-0.5 max-sm:text-sm",
                 { [cls.active]: activeFilter === `${item[1]}` },
                 []
               )}

@@ -17,6 +17,10 @@ export const Navbar = () => {
   };
   return (
     <div className={cls.navbar}>
+      <a href="https://leon.ru/" target="_blank">
+        <Icon type="LeonBets" />
+      </a>
+
       <div className="container mx-3">
         <div className={cls.wrap}>
           <div className="flex gap-5 mt-3">
