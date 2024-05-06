@@ -16,7 +16,7 @@ export const ArticleCard: FC<ArticleCardProps> = ({
 }) => {
   return (
     <Link
-      className="hover:scale-105 transform transition duration-300  "
+      className="hover:scale-105 transform transition duration-300 m-auto  "
       to={`/article/${id}`}
     >
       <article className="max-w-sm bg-white my-5 rounded-lg shadow dark:bg-gray-100 dark:border-gray-700 max-sm:max-w-xs">

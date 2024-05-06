@@ -22,7 +22,7 @@ export const HomePageArticles: FC<HomePageArticlesProps> = ({ data }) => {
 
       <div
         ref={parent}
-        className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 ml-12 font-article"
+        className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 ml-12 font-article max-520:m-auto"
       >
         {data
           .slice(-6)
