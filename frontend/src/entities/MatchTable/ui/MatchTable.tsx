@@ -60,7 +60,9 @@ export const MatchTable: FC<MatchTimetableProps> = ({
         </div>
 
         <div className="flex text-center mt-5">
-          <span className="font-bold text-xl tracking-0.5">{score}</span>
+          <span className="font-bold text-xl tracking-0.5 max-smallScr:text-xs">
+            {score}
+          </span>
         </div>
 
         <div className="flex flex-col justify-center items-center max-w-28">
