@@ -23,7 +23,7 @@ export const MatchTimetable = () => {
   }, [inited, matches]);
   return (
     <section className="flex flex-col justify-center items-center gap-4">
-      <div className="w-full flex px-28 ">
+      <div className="w-full flex px-28 max-520:px-4 max-smallScr:px-1 ">
         <div className="flex items-center gap-3 cursor-pointer">
           <Icon type="Vector" />
           <span className="font-black text-white text-2xl max-md:text-xl max-sm:text-base ">

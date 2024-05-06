@@ -1,14 +1,19 @@
+import { ClassNames } from "@/shared/lib/classNames";
 import cls from "./ClubPage.module.scss";
 function ClubPage() {
   return (
-    <section className={cls.About}>
-      <div className="flex-col pb-10 mr-14 ml-14 gap-7 ">
-        <h1 className=" pt-10 ml-10 text-2xl ">О КЛУБЕ</h1>
+    <section
+      className={ClassNames(cls.About, {}, [
+        "my-6 mx-12 max-520:my-3 max-520:mx-3",
+      ])}
+    >
+      <div className="flex-col pb-10 mr-14 ml-14 gap-7 max-520:ml-6 mr-6">
+        <h1 className=" pt-10 ml-10 text-2xl">О КЛУБЕ</h1>
         <div className={cls.line}></div>
 
         <div className="font-medium mt-7 text-xl">
           <article>
-            <div className={cls.content}>
+            <div className={ClassNames(cls.content, {}, ["max-520:text-lg"])}>
               <p>
                 ФК «Ангушт» основан в 1993 году. Официальной датой создания
                 принято считать 20 декабря 1993 года.

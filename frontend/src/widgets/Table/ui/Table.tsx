@@ -1,214 +1,190 @@
+import { TdTag } from "@/shared/ui/td/Td";
+import cls from "tailwind.config";
+
 export const Table = () => {
+  const thData = ["#", "КОМАНДА", "И", "В", "Н", "П", "РМ", "О"];
+  const rowData1 = [0, 0, 0, 0, "0:0", 0];
+  const rowData2 = [0, 0, 0, 0, "0:0", 0];
+  const rowData3 = [0, 0, 0, 0, "0:0", 0];
+  const rowData4 = [0, 0, 0, 0, "0:0", 0];
+  const rowData5 = [0, 0, 0, 0, "0:0", 0];
+  const rowData6 = [0, 0, 0, 0, "0:0", 0];
+  const rowData7 = [0, 0, 0, 0, "0:0", 0];
+  const rowData8 = [0, 0, 0, 0, "0:0", 0];
+  const rowData9 = [0, 0, 0, 0, "0:0", 0];
+  const rowData10 = [0, 0, 0, 0, "0:0", 0];
+  const rowData11 = [0, 0, 0, 0, "0:0", 0];
+  const rowData12 = [0, 0, 0, 0, "0:0", 0];
+  const rowData13 = [0, 0, 0, 0, "0:0", 0];
+  const rowData14 = [0, 0, 0, 0, "0:0", 0];
+  const rowData15 = [0, 0, 0, 0, "0:0", 0];
+  const rowData16 = [0, 0, 0, 0, "0:0", 0];
+  const rowData17 = [0, 0, 0, 0, "0:0", 0];
+
+  const www = "text-6xl";
   return (
-    <table className=" m-10 font-tableFont shadow-2xl w-full">
+    <table className=" my-7 font-tableFont shadow-2xl w-full">
       <thead className="text-white bg-green-950 text-3xl">
-        <th className="px-6 py-3 text-center ">#</th>
-        <th className="px-6 py-3 text-center ">КОМАНДА</th>
-        <th className="px-6 py-3 text-center ">И</th>
-        <th className="px-6 py-3 text-center ">В</th>
-        <th className="px-6 py-3 text-center ">Н</th>
-        <th className="px-6 py-3 text-center ">П</th>
-        <th className="px-6 py-3 text-center ">РМ</th>
-        <th className="px-6 py-3 text-center ">О</th>
+        {thData.map((data, index) => (
+          <th className="text-center py-3 px-6 font-semibold  max-832:px-2 max-832:py-2 max-sm:py-1 max-sm:px-1 max-832:text-lg max-sm:text-sm max-520:text-xs ">
+            {data}
+          </th>
+        ))}
       </thead>
       <tbody>
         <tr className="hover:bg-neutral-300 text-xl bg-white">
-          <td className="text-2xl text-center py-3 px-6 ">1</td>
-          <td className="text-center py-3 px-6 ">Рубин Ялта (Ялта)</td>
-          <td className="text-center py-3 px-6 ">4</td>
-          <td className="text-center py-3 px-6 ">4</td>
-          <td className="text-center py-3 px-6 ">0</td>
-          <td className="text-center py-3 px-6 ">0</td>
-          <td className="text-center py-3 px-6 ">8:1</td>
-          <td className="text-center py-3 px-6 ">12</td>
+          <TdTag>1</TdTag>
+          <TdTag>Легион (Махачкала)</TdTag>
+          {rowData1.map((data, index) => (
+            <TdTag key={index}>{data}</TdTag>
+          ))}
         </tr>
         <tr className="hover:bg-neutral-300 text-xl bg-white">
-          <td className="text-2xl text-center py-3 px-6 font-semibold">2</td>
-          <td className="text-center py-3 px-6 font-semibold">
-            Астрахань (Астрахань)
-          </td>
-          <td className="text-center py-3 px-6 font-semibold">4</td>
-          <td className="text-center py-3 px-6 font-semibold">3</td>
-          <td className="text-center py-3 px-6 font-semibold">1</td>
-          <td className="text-center py-3 px-6 font-semibold">0</td>
-          <td className="text-center py-3 px-6 font-semibold">6:1</td>
-          <td className="text-center py-3 px-6 font-semibold">10</td>
+          <TdTag>2</TdTag>
+
+          <TdTag> Форте (Таганрог)</TdTag>
+
+          {rowData2.map((data, index) => (
+            <TdTag key={index}>{data}</TdTag>
+          ))}
         </tr>
         <tr className="hover:bg-neutral-300 text-xl bg-white">
-          <td className="text-2xl text-center py-3 px-6 font-semibold">3</td>
-          <td className="text-center py-3 px-6 font-semibold">
-            Легион (Махачкала)
-          </td>
-          <td className="text-center py-3 px-6 ">4</td>
-          <td className="text-center py-3 px-6 ">3</td>
-          <td className="text-center py-3 px-6 ">0</td>
-          <td className="text-center py-3 px-6 ">1</td>
-          <td className="text-center py-3 px-6 ">6:3</td>
-          <td className="text-center py-3 px-6 ">9</td>
+          <TdTag>3</TdTag>
+
+          <TdTag> Ангушт (Назрань)</TdTag>
+
+          {rowData3.map((data, index) => (
+            <TdTag key={index}>{data}</TdTag>
+          ))}
         </tr>
         <tr className="hover:bg-neutral-300 text-xl bg-white">
-          <td className="text-2xl text-center py-3 px-6 font-semibold">4</td>
-          <td className="text-center py-3 px-6 font-semibold">
-            Биолог Новокубанск (п.Прогресс)
-          </td>
-          <td className="text-center py-3 px-6">3</td>
-          <td className="text-center py-3 px-6">2</td>
-          <td className="text-center py-3 px-6">1</td>
-          <td className="text-center py-3 px-6">0</td>
-          <td className="text-center py-3 px-6">6:4</td>
-          <td className="text-center py-3 px-6">7</td>
+          <TdTag>4</TdTag>
+
+          <TdTag> Ростов-2 (Ростов-на-Дону)</TdTag>
+
+          {rowData4.map((data, index) => (
+            <TdTag key={index}>{data}</TdTag>
+          ))}
         </tr>
         <tr className="hover:bg-neutral-300 text-xl bg-white">
-          <td className="text-2xl text-center py-3 px-6 font-semibold">5</td>
-          <td className="text-center py-3 px-6 font-semibold">
-            Ростов-2 (Ростов-на-Дону)
-          </td>
-          <td className="text-center py-3 px-6 ">4</td>
-          <td className="text-center py-3 px-6 font-semibold">2</td>
-          <td className="text-center py-3 px-6 font-semibold">0</td>
-          <td className="text-center py-3 px-6 font-semibold">2</td>
-          <td className="text-center py-3 px-6 font-semibold">11:5</td>
-          <td className="text-center py-3 px-6 font-semibold">6</td>
+          <TdTag>5</TdTag>
+
+          <TdTag> Астрахань (Астрахань)</TdTag>
+
+          {rowData5.map((data, index) => (
+            <TdTag key={index}>{data}</TdTag>
+          ))}
         </tr>
         <tr className="hover:bg-neutral-300 text-xl bg-white">
-          <td className="text-2xl text-center py-3 px-6 ">6</td>
-          <td className="text-center py-3 px-6 ">
-            Строитель (Каменск-Шахтинский)
-          </td>
-          <td className="text-center py-3 px-6 ">3</td>
-          <td className="text-center py-3 px-6 ">2</td>
-          <td className="text-center py-3 px-6 ">0</td>
-          <td className="text-center py-3 px-6 ">1</td>
-          <td className="text-center py-3 px-6 ">4:4</td>
-          <td className="text-center py-3 px-6 ">6</td>
+          <TdTag>6</TdTag>
+
+          <TdTag> Кубань Холдинг (ст.Павловская)</TdTag>
+
+          {rowData6.map((data, index) => (
+            <TdTag key={index}>{data}</TdTag>
+          ))}
         </tr>
         <tr className="hover:bg-neutral-300 text-xl bg-white">
-          <td className="text-2xl text-center py-3 px-6 font-semibold">7</td>
-          <td className="text-center py-3 px-6 font-semibold">
-            Кубань Холдинг (ст.Павловская)
-          </td>
-          <td className="text-center py-3 px-6 font-semibold">4</td>
-          <td className="text-center py-3 px-6 font-semibold">1</td>
-          <td className="text-center py-3 px-6 font-semibold">2</td>
-          <td className="text-center py-3 px-6 font-semibold">1</td>
-          <td className="text-center py-3 px-6 font-semibold">6:6</td>
-          <td className="text-center py-3 px-6 font-semibold">5</td>
+          <TdTag>7</TdTag>
+
+          <TdTag> Динамо Ставрополь (Ставрополь)</TdTag>
+
+          {rowData7.map((data, index) => (
+            <TdTag key={index}>{data}</TdTag>
+          ))}
         </tr>
         <tr className="hover:bg-neutral-300 text-xl bg-white">
-          <td className="text-2xl text-center py-3 px-6 font-semibold">8</td>
-          <td className="text-center py-3 px-6 font-semibold">
-            Динамо Ставрополь (Ставрополь)
-          </td>
-          <td className="text-center py-3 px-6 font-semibold">4</td>
-          <td className="text-center py-3 px-6 font-semibold">1</td>
-          <td className="text-center py-3 px-6 font-semibold">2</td>
-          <td className="text-center py-3 px-6 font-semibold">1</td>
-          <td className="text-center py-3 px-6 font-semibold">4:5</td>
-          <td className="text-center py-3 px-6 font-semibold">5</td>
+          <TdTag>8</TdTag>
+
+          <TdTag> Победа (Хасавюрт)</TdTag>
+
+          {rowData8.map((data, index) => (
+            <TdTag key={index}>{data}</TdTag>
+          ))}
         </tr>
         <tr className="hover:bg-neutral-300 text-xl bg-white">
-          <td className="text-2xl text-center py-3 px-6 font-semibold">9</td>
-          <td className="text-center py-3 px-6 font-semibold">
-            Севастополь (Севастополь)
-          </td>
-          <td className="text-center py-3 px-6 font-semibold">3</td>
-          <td className="text-center py-3 px-6 font-semibold">1</td>
-          <td className="text-center py-3 px-6 font-semibold">1</td>
-          <td className="text-center py-3 px-6 font-semibold">1</td>
-          <td className="text-center py-3 px-6 font-semibold">2:2</td>
-          <td className="text-center py-3 px-6 font-semibold">4</td>
+          <TdTag>9</TdTag>
+
+          <TdTag> Севастополь (Севастополь)</TdTag>
+
+          {rowData9.map((data, index) => (
+            <TdTag key={index}>{data}</TdTag>
+          ))}
         </tr>
         <tr className="hover:bg-neutral-300 text-xl bg-white">
-          <td className="text-2xl text-center py-3 px-6 ">10</td>
-          <td className="text-center py-3 px-6 ">Форте (Таганрог)</td>
-          <td className="text-center py-3 px-6 ">3</td>
-          <td className="text-center py-3 px-6 ">1</td>
-          <td className="text-center py-3 px-6 ">0</td>
-          <td className="text-center py-3 px-6 ">2</td>
-          <td className="text-center py-3 px-6 ">5:5</td>
-          <td className="text-center py-3 px-6 ">3</td>
+          <TdTag>10</TdTag>
+
+          <TdTag> Спартак-Нальчик (Нальчик)</TdTag>
+
+          {rowData10.map((data, index) => (
+            <TdTag key={index}>{data}</TdTag>
+          ))}
         </tr>
 
         <tr className="hover:bg-neutral-300 text-xl bg-white">
-          <td className="text-2xl text-center py-3 px-6 ">11</td>
-          <td className="text-center py-3 px-6 ">Дружба (Майкоп)</td>
-          <td className="text-center py-3 px-6 ">4</td>
-          <td className="text-center py-3 px-6 ">1</td>
-          <td className="text-center py-3 px-6 ">0</td>
-          <td className="text-center py-3 px-6 ">2</td>
-          <td className="text-center py-3 px-6 ">3:5</td>
-          <td className="text-center py-3 px-6 ">3</td>
+          <TdTag>11</TdTag>
+
+          <TdTag> Биолог Новокубанск (п.Прогресс)</TdTag>
+
+          {rowData11.map((data, index) => (
+            <TdTag key={index}>{data}</TdTag>
+          ))}
         </tr>
 
         <tr className="hover:bg-neutral-300 text-xl bg-white">
-          <td className="text-2xl text-center py-3 px-6 font-semibold">12</td>
-          <td className="text-center py-3 px-6 font-semibold">
-            Спартак-Нальчик (Нальчик)
-          </td>
-          <td className="text-center py-3 px-6 font-semibold">4</td>
-          <td className="text-center py-3 px-6 font-semibold">0</td>
-          <td className="text-center py-3 px-6 font-semibold">3</td>
-          <td className="text-center py-3 px-6 font-semibold">1</td>
-          <td className="text-center py-3 px-6 font-semibold">7:8</td>
-          <td className="text-center py-3 px-6 font-semibold">3</td>
+          <TdTag>12</TdTag>
+
+          <TdTag> Динамо-2 (Махачкала)</TdTag>
+
+          {rowData12.map((data, index) => (
+            <TdTag key={index}>{data}</TdTag>
+          ))}
         </tr>
         <tr className="hover:bg-neutral-300 text-xl bg-white">
-          <td className="text-2xl text-center py-3 px-6 font-semibold">13</td>
-          <td className="text-center py-3 px-6 font-semibold">
-            Победа (Хасавюрт)
-          </td>
-          <td className="text-center py-3 px-6 font-semibold">4</td>
-          <td className="text-center py-3 px-6 font-semibold">0</td>
-          <td className="text-center py-3 px-6 font-semibold">3</td>
-          <td className="text-center py-3 px-6 font-semibold">1</td>
-          <td className="text-center py-3 px-6 font-semibold">5:6</td>
-          <td className="text-center py-3 px-6 font-semibold">3</td>
+          <TdTag>13</TdTag>
+
+          <TdTag> Алания-2 (Владикавказ)</TdTag>
+
+          {rowData13.map((data, index) => (
+            <TdTag key={index}>{data}</TdTag>
+          ))}
         </tr>
 
         <tr className="hover:bg-neutral-300 text-xl bg-white">
-          <td className="text-2xl text-center py-3 px-6 font-semibold">14</td>
-          <td className="text-center py-3 px-6 font-semibold">
-            Нарт (Черкесск)
-          </td>
-          <td className="text-center py-3 px-6 ">4</td>
-          <td className="text-center py-3 px-6 ">0</td>
-          <td className="text-center py-3 px-6 ">3</td>
-          <td className="text-center py-3 px-6 ">1</td>
-          <td className="text-center py-3 px-6 ">3:6</td>
-          <td className="text-center py-3 px-6 ">3</td>
-        </tr>
+          <TdTag>14</TdTag>
 
-        <tr className="hover:bg-neutral-300 text-xl bg-white">
-          <td className="text-2xl text-center py-3 px-6 font-semibold">15</td>
-          <td className="text-center py-3 px-6 font-semibold">
-            Ангушт (Назрань)
-          </td>
-          <td className="text-center py-3 px-6 ">3</td>
-          <td className="text-center py-3 px-6 ">0</td>
-          <td className="text-center py-3 px-6 ">2</td>
-          <td className="text-center py-3 px-6 ">1</td>
-          <td className="text-center py-3 px-6 ">1:3</td>
-          <td className="text-center py-3 px-6 ">2</td>
+          <TdTag> Нарт (Черкесск)</TdTag>
+
+          {rowData14.map((data, index) => (
+            <TdTag key={index}>{data}</TdTag>
+          ))}
         </tr>
         <tr className="hover:bg-neutral-300 text-xl bg-white">
-          <td className="text-2xl text-center py-3 px-6">16</td>
-          <td className="text-center py-3 px-6">Динамо-2 (Махачкала)</td>
-          <td className="text-center py-3 px-6">3</td>
-          <td className="text-center py-3 px-6">0</td>
-          <td className="text-center py-3 px-6">1</td>
-          <td className="text-center py-3 px-6">2</td>
-          <td className="text-center py-3 px-">1:5</td>
-          <td className="text-center py-3 px-6">1</td>
+          <TdTag>15</TdTag>
+
+          <TdTag> Дружба (Майкоп)</TdTag>
+
+          {rowData15.map((data, index) => (
+            <TdTag key={index}>{data}</TdTag>
+          ))}
         </tr>
         <tr className="hover:bg-neutral-300 text-xl bg-white">
-          <td className="text-2xl text-center py-3 px-6">17</td>
-          <td className="text-center py-3 px-6">Алания-2 (Владикавказ)</td>
-          <td className="text-center py-3 px-6">4</td>
-          <td className="text-center py-3 px-6">0</td>
-          <td className="text-center py-3 px-6">1</td>
-          <td className="text-center py-3 px-6">3</td>
-          <td className="text-center py-3 px-6">5:14</td>
-          <td className="text-center py-3 px-6">1</td>
+          <TdTag>16</TdTag>
+
+          <TdTag> Рубин Ялта (Ялта)</TdTag>
+
+          {rowData16.map((data, index) => (
+            <TdTag key={index}>{data}</TdTag>
+          ))}
+        </tr>
+        <tr className="hover:bg-neutral-300 text-xl bg-white">
+          <TdTag>17</TdTag>
+
+          <TdTag> Строитель (Каменск-Шахтинский)</TdTag>
+
+          {rowData17.map((data, index) => (
+            <TdTag key={index}>{data}</TdTag>
+          ))}
         </tr>
       </tbody>
     </table>
