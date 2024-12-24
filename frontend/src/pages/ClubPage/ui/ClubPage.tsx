@@ -7,7 +7,7 @@ function ClubPage() {
         "my-6 mx-12 max-520:my-3 max-520:mx-3",
       ])}
     >
-      <div className="flex-col pb-10 mr-14 ml-14 gap-7 max-520:ml-6 mr-6">
+      <div className="flex-col pb-10 mr-14 ml-14 gap-7 max-520:ml-6 ">
         <h1 className=" pt-10 ml-10 text-2xl">О КЛУБЕ</h1>
         <div className={cls.line}></div>
 

@@ -38,17 +38,21 @@ export const Navbar = () => {
             </div>
           </div>
 
-          <div className="flex gap-1 mb-9 items-end">
+          <div className="flex gap-4 mb-3 flex-row justify-center items-end">
             {isMobile ? (
               <BurgerMenu
                 isOpen={isOpenBurger}
                 onClick={() => toggleBurgerMenu()}
               />
             ) : (
-              <a href="https://t.me/fc_angusht_nazran" target="_blank">
-                <Icon type="Telegram" />
+              <a href="https://t.me/fcangushtnazran" target="_blank">
+                <Icon className="w-10 pb-4 max-sm:w-6" type="Telegram" />
               </a>
             )}
+            <Icon
+              className="border-slate-950 border-2 w-28 max-lg:w-24"
+              type="FlagRussian"
+            />
           </div>
         </div>
       </div>

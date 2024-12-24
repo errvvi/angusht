@@ -52,7 +52,7 @@ export const BurgerMenu: FC<BurgerMenuProps> = ({ onClick, isOpen }) => {
               </ul>
             </nav>
             <div className="py-2 bg-customGreen w-full text-tenPx text-white flex justify-center items-center gap-2">
-              <span>Полная версия сайта</span>
+              {/* <span>Полная версия сайта</span> */}
             </div>
           </div>
         </div>

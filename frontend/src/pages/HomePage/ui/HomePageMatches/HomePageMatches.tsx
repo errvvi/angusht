@@ -20,7 +20,7 @@ export const HomePageMatches: FC<HomePageArticlesProps> = ({ data }) => {
         </div>
       </div>
       <div className="my-10 ml-24 grid grid-cols-1 lg:grid-cols-2 max-520:ml-1 ">
-        {data.slice(0, 4).map((match) => (
+        {data.slice(30, 34).map((match) => (
           <MatchTable
             key={match.id}
             tour={match.tour}

@@ -15,7 +15,8 @@ export const getMatches = createAsyncThunk<any, void, ThunkConfig<string>>(
     const { rejectWithValue } = thunkApi;
     try {
       const { data } = await axios.get<GetFetchMatches>(
-        "https://65f85cccdf151452460f3434.mockapi.io/api/matchtimetable"
+        // "https://65f85cccdf151452460f3434.mockapi.io/api/matchtimetable"
+        "https://65fb776814650eb2100a0163.mockapi.io/api/matches"
       );
       return data;
     } catch (e) {
